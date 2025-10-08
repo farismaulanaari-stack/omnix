@@ -112,6 +112,12 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.bg-brush {
+  background-image: url("../../public//images/brush.svg");
+  background-repeat: no-repeat;
+  background-position: bottom
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
