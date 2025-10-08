@@ -3,9 +3,9 @@ import DummyDashboard from "../../public/images/dummy-dashboard.svg";
 
 export default function HomeSection() {
   return (
-    <section className="w-full h-screen" id="home-section">
-      <div className="container w-full h-full mx-auto">
-        <div className="w-full h-1/2 flex flex-col gap-2 items-center justify-center">
+    <section className="w-full" id="home-section">
+      <div className="container w-full flex flex-col mx-auto">
+        <div className="w-full h-[400px] flex flex-col gap-2 items-center justify-center">
           <div className="w-fit px-6 py-1.5 ring-2 ring-indigo-600 bg-indigo-200 rounded-full flex items-center justify-center">
             <p className="font-semibold text-lg text-black">
               #1 omnichannel tools for bussiness
@@ -20,9 +20,9 @@ export default function HomeSection() {
             </h2>
           </div>
         </div>
-        <div className="w-full h-full">
-          <div className="w-full h-full bg-gray-200 rounded-2xl rounded-b-none p-5 pb-0 max-h-[800px] overflow-hidden">
-            <div className="w-full h-full bg-white rounded-md rounded-b-none overflow-hidden">
+        <div className="w-full">
+          <div className="w-full bg-gray-200 rounded-2xl rounded-b-none p-5 pb-0 max-h-[800px] overflow-hidden">
+            <div className="w-full bg-white rounded-md rounded-b-none overflow-hidden">
               <Image
                 src={DummyDashboard}
                 alt="dummy-dashboard"
