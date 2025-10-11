@@ -8,7 +8,7 @@ import {
   InputGroupAddon,
 } from "../ui/input-group";
 
-export default function InputField({
+export function InputField({
   label,
   htmlFor,
   type,

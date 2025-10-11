@@ -1,6 +1,6 @@
 import { FieldGroup } from "../ui/field"
 
-export default function FormField({
+export function FormField({
     OnSubmit,
     children
 } : Readonly<{
