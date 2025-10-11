@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { InputHTMLAttributes } from "react";
+import { FormHTMLAttributes, InputHTMLAttributes } from "react";
 
 export interface ContactUsData {
     name: string;
@@ -16,4 +16,9 @@ export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
     type?: string;
     addOn?: boolean;
     addOnElement?: LucideIcon;
+}
+
+export interface FormFieldProps extends FormHTMLAttributes<HTMLFormElement> {
+    OnSubmit?: () => void;
+    children: React.ReactNode;
 }

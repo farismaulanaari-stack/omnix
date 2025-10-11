@@ -1,17 +1,16 @@
 "use client";
 
 import { FieldGroup } from "../ui/field"
+import { FormFieldProps } from "@/types/types";
 
 export function FormField({
     OnSubmit,
-    children
-} : Readonly<{
-    OnSubmit?: () => void,
-    children: React.ReactNode
-}>) {
+    children,
+    ...props
+} : FormFieldProps) {
     return (
-        <form className="w-full h-full" onSubmit={OnSubmit}>
-            <FieldGroup className="w-full h-full px-6">
+        <form onSubmit={OnSubmit} {...props}>
+            <FieldGroup className="w-full h-full">
                 { children }
             </FieldGroup>
         </form>

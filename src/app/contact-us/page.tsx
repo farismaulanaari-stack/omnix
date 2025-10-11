@@ -29,23 +29,44 @@ export default function ContactPage() {
               sed!
             </CardDescription>
           </CardHeader>
-          <FormField>
-            <InputField 
-              label="name"
-              htmlFor="name"
-              type="text"
-            />
-            <InputField 
-              label="name"
-              htmlFor="name"
-              type="text"
-            />
-            <InputField 
-              label="name"
-              htmlFor="name"
-              type="text"
-            />
-          </FormField>
+          <CardContent className="w-full h-full">
+            <FormField className="w-full h-full">
+              <div className="w-full flex items-center gap-3">
+                <InputField 
+                  type="text"
+                  label="name"
+                  htmlFor="name"
+                  placeholder="Jhon Doe"
+                />
+                <InputField 
+                  type="text"
+                  label="company name"
+                  htmlFor="company_name"
+                  placeholder="omnix.inc"
+                />
+              </div>
+              <div className="w-full flex items-center gap-3">
+                <InputField 
+                  type="text"
+                  label="phone number"
+                  htmlFor="phone_number"
+                  placeholder="+91 1234567890"
+                />
+                <InputField 
+                  type="text"
+                  label="email"
+                  htmlFor="email"
+                  placeholder="example@mail.com"
+                />
+              </div>
+              <InputField 
+                type="text"
+                label="subject message"
+                htmlFor="subject_message"
+                placeholder="i want to build custom platform with omnix"
+              />
+            </FormField>
+          </CardContent>
       </Card>
     </>
   );
