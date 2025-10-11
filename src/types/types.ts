@@ -14,8 +14,7 @@ export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
     label: string;
     htmlFor: string;
     type?: string;
-    addOn?: boolean;
-    addOnElement?: LucideIcon;
+    children?: React.ReactNode;
 }
 
 export interface FormFieldProps extends FormHTMLAttributes<HTMLFormElement> {

@@ -7,13 +7,13 @@ import {
   InputGroupInput,
   InputGroupAddon,
 } from "../ui/input-group";
+import { Icon } from "lucide-react";
 
 export function InputField({
   label,
   htmlFor,
   type,
-  addOn,
-  addOnElement,
+  children,
   ...props
 }: InputFieldProps) {
   return (
@@ -21,7 +21,7 @@ export function InputField({
       <FieldLabel htmlFor={htmlFor}>{label}</FieldLabel>
       <InputGroup>
         <InputGroupInput type={type} id={htmlFor} {...props} />
-        {addOn ? <InputGroupAddon></InputGroupAddon> : ""}
+        { children }
       </InputGroup>
     </Field>
   );
