@@ -4,12 +4,12 @@ export function FormField({
     OnSubmit,
     children
 } : Readonly<{
-    OnSubmit: () => void,
+    OnSubmit?: () => void,
     children: React.ReactNode
 }>) {
     return (
         <form className="w-full h-full" onSubmit={OnSubmit}>
-            <FieldGroup className="w-full h-full">
+            <FieldGroup className="w-full h-full px-6">
                 { children }
             </FieldGroup>
         </form>
