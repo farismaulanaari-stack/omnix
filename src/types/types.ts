@@ -3,10 +3,10 @@ import { FormHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 
 
 export interface ContactUsData {
     name: string;
-    company: string;
-    phone: string;
+    company_name: string;
+    phone_number: string;
     email: string;
-    subject?: string;
+    subject_mesage?: string;
     message: string;
 }
 
