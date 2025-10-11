@@ -1,3 +1,5 @@
+"use client";
+
 import { FieldGroup } from "../ui/field"
 
 export function FormField({
