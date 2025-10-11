@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 
 import { FormField } from "@/components/FormField/form-field";
 import { InputField } from "@/components/InputField/input-field";
+import { TextareaField } from "@/components/TextareaField/textarea-field";
 
 export default function ContactPage() {
   return (
@@ -65,6 +66,10 @@ export default function ContactPage() {
                 htmlFor="subject_message"
                 placeholder="i want to build custom platform with omnix"
               />
+              <TextareaField label="message" htmlFor="message" className="resize-y min-h-36 max-h-56"/>
+              <CardFooter className="w-full bg-blue-200 mt-auto">
+                <Button className="w-full">submit your message</Button>
+              </CardFooter>
             </FormField>
           </CardContent>
       </Card>
