@@ -20,7 +20,7 @@ export function InputField({
     <Field>
       <FieldLabel htmlFor={htmlFor}>{label}</FieldLabel>
       <InputGroup>
-        <InputGroupInput type={type} id={htmlFor} {...props} />
+        <InputGroupInput type={type} id={htmlFor} name={htmlFor} {...props} />
         { children }
       </InputGroup>
     </Field>
