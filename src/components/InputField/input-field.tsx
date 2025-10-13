@@ -5,24 +5,24 @@ import { Field, FieldLabel, FieldError } from "../ui/field";
 import {
   InputGroup,
   InputGroupInput,
-  InputGroupAddon,
 } from "../ui/input-group";
-import { Icon } from "lucide-react";
 
 export function InputField({
   label,
   htmlFor,
-  type,
   children,
+  error,
+  errorMsg,
   ...props
 }: InputFieldProps) {
   return (
-    <Field>
+    <Field data-invalid={error} >
       <FieldLabel htmlFor={htmlFor}>{label}</FieldLabel>
       <InputGroup>
-        <InputGroupInput type={type} id={htmlFor} name={htmlFor} {...props} />
+        <InputGroupInput id={htmlFor} name={htmlFor} {...props} aria-invalid={error}/>
         { children }
       </InputGroup>
+      <FieldError errors={errorMsg}/>
     </Field>
   );
 }

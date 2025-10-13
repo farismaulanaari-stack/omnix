@@ -11,9 +11,10 @@ export interface ContactUsData {
 }
 
 export interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
+    error?: boolean;
+    errorMsg?: Array<{ message?: string } | undefined>;
     label: string;
     htmlFor: string;
-    type?: string;
     children?: React.ReactNode;
 }
 
