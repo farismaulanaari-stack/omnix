@@ -16,10 +16,10 @@ export function InputField({
   ...props
 }: InputFieldProps) {
   return (
-    <Field data-invalid={error} >
+    <Field data-invalid={error ? true : false} >
       <FieldLabel htmlFor={htmlFor}>{label}</FieldLabel>
       <InputGroup>
-        <InputGroupInput id={htmlFor} name={htmlFor} {...props} aria-invalid={error}/>
+        <InputGroupInput id={htmlFor} name={htmlFor} {...props} aria-invalid={error ? true : false}/>
         { children }
       </InputGroup>
       {errorMsg && <FieldError errors={errorMsg}/>}
