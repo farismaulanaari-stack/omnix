@@ -22,7 +22,7 @@ export function InputField({
         <InputGroupInput id={htmlFor} name={htmlFor} {...props} aria-invalid={error}/>
         { children }
       </InputGroup>
-      <FieldError errors={errorMsg}/>
+      {errorMsg && <FieldError errors={errorMsg}/>}
     </Field>
   );
 }
