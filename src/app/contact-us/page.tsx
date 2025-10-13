@@ -45,6 +45,7 @@ export default function ContactPage() {
                 label="name"
                 htmlFor="name"
                 placeholder="Jhon Doe"
+                
               >
                 <InputGroupAddon>
                   <UserRound className="w-5 h-5 text-indigo-600" />
@@ -55,6 +56,7 @@ export default function ContactPage() {
                 label="company name"
                 htmlFor="company_name"
                 placeholder="omnix.inc"
+                
               >
                 <InputGroupAddon>
                   <Building2 className="w-5 h-5 text-indigo-600" />
