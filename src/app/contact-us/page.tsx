@@ -34,10 +34,9 @@ export default function ContactPage() {
     formState: { errors, isValid },
   } = useForm<ContactUsData>();
 
-
   const onSubmit: SubmitHandler<ContactUsData> = (data) => {
     console.log(data);
-  }
+  };
 
   return (
     <>
@@ -54,7 +53,10 @@ export default function ContactPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="w-full h-full">
-          <FormField className="w-full h-full" OnSubmit={handleSubmit(onSubmit)}>
+          <FormField
+            className="w-full h-full"
+            OnSubmit={handleSubmit(onSubmit)}
+          >
             <div className="w-full flex items-center gap-3">
               <InputField
                 type="text"
@@ -63,7 +65,7 @@ export default function ContactPage() {
                 placeholder="Jhon Doe"
                 error={errors.name ? true : false}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("name", {required: true})}
+                {...register("name", { required: true, minLength: 3 })}
               >
                 <InputGroupAddon>
                   <UserRound className="w-5 h-5 text-indigo-600" />
@@ -76,7 +78,7 @@ export default function ContactPage() {
                 placeholder="omnix.inc"
                 error={errors.company_name ? true : false}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("company_name", {required: true})}
+                {...register("company_name", { required: true, minLength: 3 })}
               >
                 <InputGroupAddon>
                   <Building2 className="w-5 h-5 text-indigo-600" />
@@ -91,7 +93,10 @@ export default function ContactPage() {
                 placeholder="+91 1234567890"
                 error={errors.phone_number ? true : false}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("phone_number", {required: true})}
+                {...register("phone_number", {
+                  required: true,
+                  minLength: 6
+                })}
               >
                 <InputGroupAddon>
                   <Phone className="w-5 h-5 text-indigo-600" />
@@ -104,7 +109,10 @@ export default function ContactPage() {
                 placeholder="example@mail.com"
                 error={errors.email ? true : false}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("email", {required: true})}
+                {...register("email", {
+                  required: true,
+                  pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                })}
               >
                 <InputGroupAddon>
                   <Mail className="w-5 h-5 text-indigo-600" />
@@ -118,7 +126,7 @@ export default function ContactPage() {
               placeholder="i want to build custom platform with omnix"
               error={errors.subject_mesage ? true : false}
               className="aria-invalid:placeholder:text-destructive"
-              {...register("subject_mesage", {required: true})}
+              {...register("subject_mesage")}
             >
               <InputGroupAddon>
                 <TextAlignStart className="w-5 h-5 text-indigo-600" />
@@ -128,7 +136,7 @@ export default function ContactPage() {
               label="message"
               htmlFor="message"
               className="resize-y min-h-36 max-h-56"
-              {...register("message", {required: true})}
+              {...register("message", { required: true, minLength: 10 })}
             />
             <CardFooter className="w-full mt-auto px-0">
               <Button className="w-full">submit your message</Button>
