@@ -125,7 +125,7 @@ export default function ContactPage() {
             <TextareaField
               label="message"
               htmlFor="message"
-              className="resize-y min-h-48 py-3 px-0 max-h-[248px] aria-invalid:placeholder:text-destructive"
+              className="resize-y py-3 px-0 min-h-[245px] aria-invalid:placeholder:text-destructive aria-invalid:min-h-[190px]"
               error={errors.message ? true : false}
               errorMsg={errors.message?.message}
               placeholder="i have solution for my bussines and that solution is to use omnix in my bussines."
