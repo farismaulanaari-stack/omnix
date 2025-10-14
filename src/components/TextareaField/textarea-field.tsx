@@ -17,6 +17,7 @@ export function TextareaField({
             <InputGroup>
                 <InputGroupTextarea id={htmlFor} name={htmlFor} {...props} aria-invalid={error ? true : false}/>
             </InputGroup>
+                {error && <p className="text-destructive text-xs">{errorMsg}</p>}
         </Field>
     )
 }

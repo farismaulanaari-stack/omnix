@@ -122,25 +122,12 @@ export default function ContactPage() {
                 </InputGroupAddon>
               </InputField>
             </div>
-            <InputField
-              type="text"
-              label="subject message"
-              htmlFor="subject_message"
-              placeholder="i want to build custom platform with omnix"
-              error={errors.subject_mesage ? true : false}
-              errorMsg={errors.subject_mesage?.message}
-              className="aria-invalid:placeholder:text-destructive"
-              {...register("subject_mesage")}
-            >
-              <InputGroupAddon>
-                <TextAlignStart className={`w-5 h-5 ${errors.subject_mesage ? "text-destructive" : "text-indigo-600"}`} />
-              </InputGroupAddon>
-            </InputField>
             <TextareaField
               label="message"
               htmlFor="message"
-              className="resize-y min-h-36 max-h-56"
+              className="resize-y min-h-48 p-0 max-h-[248px]"
               error={errors.message ? true : false}
+              errorMsg={errors.message?.message}
               {...register("message", { required: "message is required", minLength: 10 })}
             />
             <CardFooter className="w-full mt-auto px-0">
