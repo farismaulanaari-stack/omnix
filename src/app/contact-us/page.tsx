@@ -40,7 +40,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Card className="w-1/2 h-5/6 ring ring-black/20 shadow-none rounded-l-none py-6">
+      <Card className="w-1/2 h-full shadow-none ring-0 rounded-l-none py-3 border-none">
         <CardHeader className="w-full flex flex-col gap-3">
           <CardTitle className="text-4xl font-bold w-full">
             Send Us a Message
