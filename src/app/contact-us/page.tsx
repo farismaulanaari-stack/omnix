@@ -68,7 +68,7 @@ export default function ContactPage() {
                 {...register("name", { required: true, minLength: 3 })}
               >
                 <InputGroupAddon>
-                  <UserRound className="w-5 h-5 text-indigo-600" />
+                  <UserRound className={`w-5 h-5 ${errors.name ? "text-destructive" : "text-indigo-600"}`} />
                 </InputGroupAddon>
               </InputField>
               <InputField
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 {...register("company_name", { required: true, minLength: 3 })}
               >
                 <InputGroupAddon>
-                  <Building2 className="w-5 h-5 text-indigo-600" />
+                  <Building2 className={`w-5 h-5 ${errors.company_name ? "text-destructive" : "text-indigo-600"}`} />
                 </InputGroupAddon>
               </InputField>
             </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 })}
               >
                 <InputGroupAddon>
-                  <Phone className="w-5 h-5 text-indigo-600" />
+                  <Phone className={`w-5 h-5 ${errors.phone_number ? "text-destructive" : "text-indigo-600"}`} />
                 </InputGroupAddon>
               </InputField>
               <InputField
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 })}
               >
                 <InputGroupAddon>
-                  <Mail className="w-5 h-5 text-indigo-600" />
+                  <Mail className={`w-5 h-5 ${errors.email ? "text-destructive" : "text-indigo-600"}`} />
                 </InputGroupAddon>
               </InputField>
             </div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
               {...register("subject_mesage")}
             >
               <InputGroupAddon>
-                <TextAlignStart className="w-5 h-5 text-indigo-600" />
+                <TextAlignStart className={`w-5 h-5 ${errors.subject_mesage ? "text-destructive" : "text-indigo-600"}`} />
               </InputGroupAddon>
             </InputField>
             <TextareaField
