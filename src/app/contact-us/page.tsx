@@ -40,7 +40,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Card className="w-1/2 h-4/5 bg-indigo-100 ring ring-indigo-600/20 shadow-none rounded-r-none"></Card>
       <Card className="w-1/2 h-5/6 ring ring-black/20 shadow-none rounded-l-none py-6">
         <CardHeader className="w-full flex flex-col gap-3">
           <CardTitle className="text-4xl font-bold w-full">
@@ -64,8 +63,9 @@ export default function ContactPage() {
                 htmlFor="name"
                 placeholder="Jhon Doe"
                 error={errors.name ? true : false}
+                errorMsg={errors.name?.message}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("name", { required: true, minLength: 3 })}
+                {...register("name", { required: "name is required", minLength: 3 })}
               >
                 <InputGroupAddon>
                   <UserRound className={`w-5 h-5 ${errors.name ? "text-destructive" : "text-indigo-600"}`} />
@@ -77,8 +77,9 @@ export default function ContactPage() {
                 htmlFor="company_name"
                 placeholder="omnix.inc"
                 error={errors.company_name ? true : false}
+                errorMsg={errors.company_name?.message}
                 className="aria-invalid:placeholder:text-destructive"
-                {...register("company_name", { required: true, minLength: 3 })}
+                {...register("company_name", { required: "company name is required", minLength: 3 })}
               >
                 <InputGroupAddon>
                   <Building2 className={`w-5 h-5 ${errors.company_name ? "text-destructive" : "text-indigo-600"}`} />
@@ -92,9 +93,10 @@ export default function ContactPage() {
                 htmlFor="phone_number"
                 placeholder="+91 1234567890"
                 error={errors.phone_number ? true : false}
+                errorMsg={errors.phone_number?.message}
                 className="aria-invalid:placeholder:text-destructive"
                 {...register("phone_number", {
-                  required: true,
+                  required: "phone is required",
                   minLength: 6
                 })}
               >
@@ -108,9 +110,10 @@ export default function ContactPage() {
                 htmlFor="email"
                 placeholder="example@mail.com"
                 error={errors.email ? true : false}
+                errorMsg={errors.email?.message}
                 className="aria-invalid:placeholder:text-destructive"
                 {...register("email", {
-                  required: true,
+                  required: "email is required",
                   pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                 })}
               >
@@ -125,6 +128,7 @@ export default function ContactPage() {
               htmlFor="subject_message"
               placeholder="i want to build custom platform with omnix"
               error={errors.subject_mesage ? true : false}
+              errorMsg={errors.subject_mesage?.message}
               className="aria-invalid:placeholder:text-destructive"
               {...register("subject_mesage")}
             >
@@ -136,7 +140,8 @@ export default function ContactPage() {
               label="message"
               htmlFor="message"
               className="resize-y min-h-36 max-h-56"
-              {...register("message", { required: true, minLength: 10 })}
+              error={errors.message ? true : false}
+              {...register("message", { required: "message is required", minLength: 10 })}
             />
             <CardFooter className="w-full mt-auto px-0">
               <Button className="w-full">submit your message</Button>
