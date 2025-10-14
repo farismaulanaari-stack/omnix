@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
 
+import { IndustryCard } from "../IndustryCard/industry-card";
+
 export default function SiteHeader() {
   return (
     <NavigationMenu className="h-20 ring ring-black/20" viewport={false}>
@@ -49,16 +51,16 @@ export default function SiteHeader() {
             <NavigationMenuContent className="min-w-[600px] h-[250px] p-4">
               <div className="w-full h-full flex flex-col gap-4">
                 <div className="w-full h-1/2 flex items-center gap-4">
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <IndustryCard />
+                  <IndustryCard />
                 </div>
                 <div className="w-full h-1/2 flex items-center gap-4">
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <IndustryCard />
+                  <IndustryCard />
                 </div>
                 <div className="w-full h-1/2 flex items-center gap-4">
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
-                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <IndustryCard />
+                  <IndustryCard />
                 </div>
               </div>
             </NavigationMenuContent>
