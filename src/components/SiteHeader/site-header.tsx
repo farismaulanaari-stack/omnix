@@ -46,11 +46,30 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">industry</p>
             </NavigationMenuTrigger>
+            <NavigationMenuContent className="min-w-[600px] h-[250px] p-4">
+              <div className="w-full h-full flex flex-col gap-4">
+                <div className="w-full h-1/2 flex items-center gap-4">
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                </div>
+                <div className="w-full h-1/2 flex items-center gap-4">
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                </div>
+                <div className="w-full h-1/2 flex items-center gap-4">
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                  <div className="w-full h-full rounded-md ring ring-black/20"></div>
+                </div>
+              </div>
+            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">solutions</p>
             </NavigationMenuTrigger>
+            <NavigationMenuContent className="min-w-[650px] min-h-[250px]">
+
+            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
