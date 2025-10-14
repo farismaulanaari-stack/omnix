@@ -125,7 +125,7 @@ export default function ContactPage() {
             <TextareaField
               label="message"
               htmlFor="message"
-              className="resize-y min-h-48 p-0 max-h-[248px]"
+              className="resize-y min-h-48 py-3 px-0 max-h-[248px]"
               error={errors.message ? true : false}
               errorMsg={errors.message?.message}
               {...register("message", { required: "message is required", minLength: 10 })}

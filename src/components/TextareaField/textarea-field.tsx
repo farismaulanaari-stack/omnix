@@ -2,7 +2,7 @@
 
 import { TextareaFieldProps } from "@/types/types";
 import { Field, FieldLabel, FieldError } from "../ui/field";
-import { InputGroup, InputGroupTextarea } from "../ui/input-group";
+import { InputGroup, InputGroupAddon, InputGroupTextarea } from "../ui/input-group";
 
 export function TextareaField({
     label,
@@ -16,8 +16,10 @@ export function TextareaField({
             <FieldLabel htmlFor={htmlFor}>{label}</FieldLabel>
             <InputGroup>
                 <InputGroupTextarea id={htmlFor} name={htmlFor} {...props} aria-invalid={error ? true : false}/>
+                <InputGroupAddon className={`w-full py-2 border-2 rounded-t-xl ${error ? "border-destructive" : ""}`} align={"block-start"}>
+                    <p className={`text-sm font-medium ${error ? "text-destructive" : "text-black/50"}`}>{errorMsg ? errorMsg : "leave your message to omnix below."}</p>
+                </InputGroupAddon>
             </InputGroup>
-                {error && <p className="text-destructive text-xs">{errorMsg}</p>}
         </Field>
     )
 }
