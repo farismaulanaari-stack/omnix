@@ -26,4 +26,6 @@ export interface FormFieldProps extends FormHTMLAttributes<HTMLFormElement> {
 export interface TextareaFieldProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     label: string;
     htmlFor: string;
+    error?: boolean;
+    errorMsg?: string | undefined;
 }
