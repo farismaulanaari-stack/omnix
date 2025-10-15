@@ -48,17 +48,13 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">industry</p>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[600px] h-[250px] p-4">
+            <NavigationMenuContent className="min-w-[700px] h-[230px] p-3 shadow-none border-none ring ring-black/20">
               <div className="w-full h-full flex flex-col gap-4">
-                <div className="w-full h-1/2 flex items-center gap-4">
+                <div className="w-full h-1/2 flex items-center gap-3">
                   <IndustryCard />
                   <IndustryCard />
                 </div>
-                <div className="w-full h-1/2 flex items-center gap-4">
-                  <IndustryCard />
-                  <IndustryCard />
-                </div>
-                <div className="w-full h-1/2 flex items-center gap-4">
+                <div className="w-full h-1/2 flex items-center gap-3">
                   <IndustryCard />
                   <IndustryCard />
                 </div>
@@ -69,9 +65,7 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">solutions</p>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[650px] min-h-[250px]">
-
-            </NavigationMenuContent>
+            <NavigationMenuContent className="min-w-[650px] min-h-[250px] shadow-none border-none ring ring-black/20"></NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
