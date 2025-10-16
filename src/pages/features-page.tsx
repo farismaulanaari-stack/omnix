@@ -4,13 +4,13 @@ export default function FeaturesPage() {
   return (
     <section className="w-full pt-36 pb-16">
       <div className="container w-full flex flex-col gap-20 mx-auto">
-        <div className="w-full flex flex-col gap-3 items-center">
-          <span className="w-fit px-6 py-1 bg-indigo-200 ring-2 ring-indigo-600 rounded-full">
-            <p className="text-base font-semibold text-black">
+        <div className="w-full flex flex-col gap-3.5 items-center">
+          <div className="w-fit px-6 py-1 bg-indigo-200 ring-2 ring-indigo-600 rounded-full">
+            <p className="text-lg font-semibold text-black">
               omnix core features
             </p>
-          </span>
-          <h2 className="text-5xl font-bold max-w-3xl text-center leading-normal">
+          </div>
+          <h2 className="text-6xl font-bold max-w-3xl text-center leading-tight">
             core features that make our platform unique
           </h2>
           <p className="text-lg font-medium max-w-xl text-center text-black/50">
