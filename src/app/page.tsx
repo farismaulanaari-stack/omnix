@@ -7,7 +7,6 @@ import HomeSection from "@/pages/home-page";
 export default function Home() {
   return (
     <>
-      <SiteHeader />
       <HomeSection />
       <AboutSection />
       <FeaturesPage />

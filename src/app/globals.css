@@ -118,6 +118,21 @@
   background-position: bottom
 }
 
+.hover-effect::after {
+  content: "";
+  position: absolute;
+  background-color: #4f46e5;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.hover-effect:hover::after {
+  width: 100%;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
