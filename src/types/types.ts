@@ -29,3 +29,7 @@ export interface TextareaFieldProps extends TextareaHTMLAttributes<HTMLTextAreaE
     error?: boolean;
     errorMsg?: string | undefined;
 }
+
+export interface PricingIconProps {
+    variant: "starter" | "professional" |  "enterprise";
+}
