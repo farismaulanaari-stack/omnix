@@ -6,18 +6,20 @@ import OmnixLogo from "../../../public/images/omnix-logo.svg";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Button } from "../ui/button";
 
 import { IndustryCard } from "../IndustryCard/industry-card";
+import { staticIndustryData } from "../../../public/data/static-industry";
 
 export default function SiteHeader() {
+  console.log(staticIndustryData);
+  console.log(staticIndustryData.slice(0, 2));
+  console.log(staticIndustryData.slice(2, 4));
   return (
     <NavigationMenu className="h-20 ring ring-black/20" viewport={false}>
       <div className="container w-full flex items-center justify-between">
@@ -51,12 +53,28 @@ export default function SiteHeader() {
             <NavigationMenuContent className="min-w-[700px] h-fit p-3 shadow-none border-none ring ring-black/20">
               <div className="w-full h-full flex flex-col gap-4">
                 <div className="w-full flex items-center gap-3">
-                  <IndustryCard />
-                  <IndustryCard />
+                  {staticIndustryData.slice(0, 2).map((card, index) => (
+                    <IndustryCard
+                      key={index}
+                      Icon={card.Icon}
+                      title={card.title}
+                      description={card.description}
+                      href={card.href}
+                      industry={card.industry}
+                    />
+                  ))}
                 </div>
                 <div className="w-full flex items-center gap-3">
-                  <IndustryCard />
-                  <IndustryCard />
+                  {staticIndustryData.slice(2, 4).map((card, index) => (
+                    <IndustryCard
+                      key={index}
+                      Icon={card.Icon}
+                      title={card.title}
+                      description={card.description}
+                      href={card.href}
+                      industry={card.industry}
+                    />
+                  ))}
                 </div>
               </div>
             </NavigationMenuContent>
