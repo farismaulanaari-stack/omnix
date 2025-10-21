@@ -3,10 +3,26 @@ import { Card, CardHeader, CardTitle, CardDescription } from "../ui/card"
 import { IndustryCardProps } from "@/types/types"
 
 const industryClassname = {
-    healthcare: "bg-indigo-50",
-    retail: "bg-indigo-50",
-    manufacturing: "bg-indigo-50",
-    technology: "bg-indigo-50"
+    healthcare: {
+        hover: "",
+        bgIcon: "",
+        icon: ""
+    },
+    retail: {
+        hover: "",
+        bgIcon: "",
+        icon: ""
+    },
+    manufacturing: {
+        hover: "",
+        bgIcon: "",
+        icon: ""
+    },
+    technology: {
+        hover: "",
+        bgIcon: "",
+        icon: ""
+    }
 }
 
 export function IndustryCard({
