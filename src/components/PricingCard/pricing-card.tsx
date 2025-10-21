@@ -26,11 +26,16 @@ export function PricingCard({ data }: PricingCardData) {
   return (
     <>
       {data.map((card, index) => (
-        <Card className="w-full h-[800px] ring ring-black/20 border-none bg-white shadow-none rounded-4xl rounded-b-none p-0">
+        <Card
+          key={index}
+          className="w-full h-[800px] ring ring-black/20 border-none bg-white shadow-none rounded-4xl rounded-b-none p-0"
+        >
           <CardHeader className="p-5 flex flex-col gap-4">
             <PricingIcon variant={card.variant} />
             <div className="w-full flex flex-col gap-2">
-              <CardTitle className="text-xl font-bold">{card.title ? card.title : card.variant}</CardTitle>
+              <CardTitle className="text-xl font-bold">
+                {card.title ? card.title : card.variant}
+              </CardTitle>
               <CardDescription className="text-lg font-medium">
                 {card.description ? card.description : "please wait"}
               </CardDescription>
