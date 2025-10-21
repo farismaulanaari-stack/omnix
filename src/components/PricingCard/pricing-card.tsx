@@ -65,7 +65,9 @@ export function PricingCard({ data }: PricingCardData) {
               </div>
               <ul className="w-full h-full flex flex-col gap-10">
                 {card.listFeatures.map((feature, index) => (
-                  <li className="w-full flex items-center gap-2">
+                  <li
+                    key={index}
+                    className="w-full flex items-center gap-2">
                     <CheckCheckIcon className="w-6 h-6 text-green-500" />
                     <h4 className="text-base text-black/50 font-medium">
                       {feature ? feature : "please wait"}
