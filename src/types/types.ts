@@ -33,3 +33,11 @@ export interface TextareaFieldProps extends TextareaHTMLAttributes<HTMLTextAreaE
 export interface PricingIconProps {
     variant: "starter" | "professional" |  "enterprise";
 }
+
+export interface PricingCardProps {
+    variant: "starter" | "professional" |  "enterprise";
+    title: string;
+    description: string;
+    price: string;
+    listFeatures: string[];
+}
