@@ -43,7 +43,7 @@ export interface PricingCardProps {
 }
 
 export interface IndustryCardProps {
-    icon: LucideIcon;
+    Icon: LucideIcon;
     title: string;
     description: string;
     href: string;
