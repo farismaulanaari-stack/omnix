@@ -41,3 +41,11 @@ export interface PricingCardProps {
     price: string;
     listFeatures: string[];
 }
+
+export interface IndustryCardProps {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+    href: string;
+    industry: "healthcare" | "retail" | "manufacturing" | "technology";
+}
