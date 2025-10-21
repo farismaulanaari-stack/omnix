@@ -50,7 +50,7 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">industry</p>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[700px] h-fit p-3 shadow-none border-none ring ring-black/20">
+            <NavigationMenuContent className="min-w-[700px] h-fit p-3 shadow-none border-none ring ring-black/20 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
               <div className="w-full h-full flex flex-col gap-4">
                 <div className="w-full flex items-center gap-3">
                   {staticIndustryData.slice(0, 2).map((card, index) => (
@@ -83,7 +83,7 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">solutions</p>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[650px] min-h-[250px] shadow-none border-none ring ring-black/20"></NavigationMenuContent>
+            <NavigationMenuContent className="min-w-[650px] min-h-[250px] shadow-none border-none ring ring-black/20 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2"></NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
