@@ -24,7 +24,7 @@ export default function PricingPage() {
             </p>
           </div>
         </div>
-        <div className="w-full flex items-center justify-between gap-6">
+        <div className="w-full flex items-end justify-between gap-4 overflow-hidden pt-2">
           <PricingCard data={staticPricingData} />
         </div>
       </div>

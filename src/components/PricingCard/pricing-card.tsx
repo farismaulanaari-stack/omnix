@@ -17,9 +17,21 @@ interface PricingCardData {
 }
 
 const variantClassname = {
-  starter: "bg-green-500",
-  professional: "bg-blue-500",
-  enterprise: "bg-indigo-500",
+  starter: {
+    backgroundButton: "bg-green-500",
+    textButton: "choose this plan",
+    hoverEffect: "hover:bg-green-700",
+  },
+  professional: {
+    backgroundButton: "bg-blue-500",
+    textButton: "choose this plan",
+    hoverEffect: "hover:bg-blue-700",
+  },
+  enterprise: {
+    backgroundButton: "bg-indigo-500",
+    textButton: "contact us for more information",
+    hoverEffect: "hover:bg-indigo-700",
+  },
 };
 
 export function PricingCard({ data }: PricingCardData) {
@@ -28,7 +40,9 @@ export function PricingCard({ data }: PricingCardData) {
       {data.map((card, index) => (
         <Card
           key={index}
-          className="w-full h-[800px] ring ring-black/20 border-none bg-white shadow-none rounded-4xl rounded-b-none p-0"
+          className={`w-full ${
+            card.variant === "professional" ? "h-[800px] ring-2 ring-indigo-600" : "h-[750px] ring ring-black/20"
+          } bg-white shadow-none rounded-4xl rounded-b-none p-0`}
         >
           <CardHeader className="p-5 flex flex-col gap-4">
             <PricingIcon variant={card.variant} />
@@ -45,18 +59,20 @@ export function PricingCard({ data }: PricingCardData) {
             <div className="w-full">
               <h2 className="font-semibold text-4xl text-black">
                 {card.price ? card.price : "$0"}{" "}
-                <span className="text-lg font-medium text-black/50">
-                  /month
-                </span>
+                {card.variant === "enterprise" ? "" : (<span className="text-lg font-medium text-black/50">/month</span>)}
               </h2>
             </div>
             <div className="w-full">
               <Button
                 className={`w-full p-6 ${
-                  variantClassname[card.variant]
-                } rounded-lg`}
+                  variantClassname[card.variant].backgroundButton
+                } rounded-lg transition-all duration-200 ease-in-out ${
+                  variantClassname[card.variant].hoverEffect
+                }`}
               >
-                <p className="text-base">choose this plan</p>
+                <p className="text-base">
+                  {variantClassname[card.variant].textButton}
+                </p>
               </Button>
             </div>
             <div className="w-full h-full flex flex-col gap-3">
@@ -65,9 +81,7 @@ export function PricingCard({ data }: PricingCardData) {
               </div>
               <ul className="w-full h-full flex flex-col gap-10">
                 {card.listFeatures.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="w-full flex items-center gap-2">
+                  <li key={index} className="w-full flex items-center gap-2">
                     <CheckCheckIcon className="w-6 h-6 text-green-500" />
                     <h4 className="text-base text-black/50 font-medium">
                       {feature ? feature : "please wait"}

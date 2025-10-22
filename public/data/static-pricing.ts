@@ -5,7 +5,7 @@ export const staticPricingData: PricingCardProps[] = [
         variant: "starter",
         title: "Starter (for small teams)",
         description: "Perfect for freelancers or small businesses who want to simplify client communication.",
-        price: "&9,500",
+        price: "$9,500",
         listFeatures: [
             "Unified Inbox (max 2 integrations)",
             "Basic Analytics Dashboard",
@@ -18,7 +18,7 @@ export const staticPricingData: PricingCardProps[] = [
         variant: "professional",
         title: "Professional (for Growing Teams)",
         description: "Designed for mid-sized teams that need powerful automation and deeper insights.",
-        price: "&29,200",
+        price: "$29,200",
         listFeatures: [
             "Up to 10 Integrations",
             "Smart Workflow Automation",
