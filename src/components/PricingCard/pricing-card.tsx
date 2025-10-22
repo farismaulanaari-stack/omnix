@@ -11,6 +11,7 @@ import {
 } from "../ui/card";
 import { PricingIcon } from "../PricingIcons/pricing-icons";
 import { CheckCheckIcon } from "lucide-react";
+import { CustomBadge } from "../Badge/badge";
 
 interface PricingCardData {
   data: PricingCardProps[];
@@ -45,7 +46,15 @@ export function PricingCard({ data }: PricingCardData) {
           } bg-white shadow-none rounded-4xl rounded-b-none p-0`}
         >
           <CardHeader className="p-5 flex flex-col gap-4">
-            <PricingIcon variant={card.variant} />
+            {card.variant === "professional"
+            ? (<div className="w-full flex items-start justify-between">
+              <PricingIcon variant={card.variant}/>
+              <CustomBadge variant="outline" className="px-3 py-1 ring-2 ring-indigo-600 bg-indigo-50">
+                <p className="text-xs font-semibold">most popular</p>
+              </CustomBadge>
+            </div>)
+            : (<PricingIcon variant={card.variant} />)
+            }
             <div className="w-full flex flex-col gap-2">
               <CardTitle className="text-xl font-bold">
                 {card.title ? card.title : card.variant}

@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { FormHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import { FormHTMLAttributes, HTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
 
 export interface ContactUsData {
     name: string;
@@ -56,4 +56,9 @@ export interface SolutionCardProps {
     href?: string;
     Icon?: LucideIcon;
     className?: string;
+}
+
+export interface CustomBadgeProps extends HTMLAttributes<HTMLSpanElement> {
+    variant: "default" | "secondary" | "destructive" | "outline";
+    children: React.ReactNode;
 }
