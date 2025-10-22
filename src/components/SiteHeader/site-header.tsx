@@ -15,6 +15,8 @@ import { Button } from "../ui/button";
 
 import { IndustryCard } from "../IndustryCard/industry-card";
 import { staticIndustryData } from "../../../public/data/static-industry";
+import { SolutionCard } from "../SolutionCard/solution-card";
+import { staticSolutionsData } from "../../../public/data/static-solutions";
 
 export default function SiteHeader() {
   console.log(staticIndustryData);
@@ -85,12 +87,15 @@ export default function SiteHeader() {
             </NavigationMenuTrigger>
             <NavigationMenuContent className="min-w-[800px] h-[350px] shadow-none border-none ring ring-black/20 p-4 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
               <div className="min-w-full h-full grid grid-cols-6 grid-rows-3 gap-4">
-                <div className="col-span-3 ring ring-black/20">1</div>
-                <div className="col-span-3 col-start-4 ring ring-black/20">2</div>
-                <div className="col-span-3 row-start-2 ring ring-black/20">3</div>
-                <div className="col-span-3 col-start-4 row-start-2 ring ring-black/20">4</div>
-                <div className="col-span-3 row-start-3 ring ring-black/20">5</div>
-                <div className="col-span-3 col-start-4 row-start-3 ring ring-black/20">6</div>
+                {staticSolutionsData.map((card, index) => (
+                  <SolutionCard
+                    key={index}
+                    className={card.className}
+                    title={card.title}
+                    description={card.description}
+                    Icon={card.Icon}
+                  />
+                ))}
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>

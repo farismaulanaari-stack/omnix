@@ -49,3 +49,11 @@ export interface IndustryCardProps {
     href: string;
     industry: "healthcare" | "retail" | "manufacturing" | "technology";
 }
+
+export interface SolutionCardProps {
+    title?: string;
+    description?: string;
+    href?: string;
+    Icon?: LucideIcon;
+    className?: string;
+}
