@@ -83,7 +83,16 @@ export default function SiteHeader() {
             <NavigationMenuTrigger>
               <p className="text-base font-medium text-black">solutions</p>
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[650px] min-h-[250px] shadow-none border-none ring ring-black/20 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2"></NavigationMenuContent>
+            <NavigationMenuContent className="min-w-[800px] h-[350px] shadow-none border-none ring ring-black/20 p-4 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
+              <div className="min-w-full h-full grid grid-cols-6 grid-rows-3 gap-4">
+                <div className="col-span-3 ring ring-black/20">1</div>
+                <div className="col-span-3 col-start-4 ring ring-black/20">2</div>
+                <div className="col-span-3 row-start-2 ring ring-black/20">3</div>
+                <div className="col-span-3 col-start-4 row-start-2 ring ring-black/20">4</div>
+                <div className="col-span-3 row-start-3 ring ring-black/20">5</div>
+                <div className="col-span-3 col-start-4 row-start-3 ring ring-black/20">6</div>
+              </div>
+            </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
