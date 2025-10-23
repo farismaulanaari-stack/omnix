@@ -62,3 +62,10 @@ export interface CustomBadgeProps extends HTMLAttributes<HTMLSpanElement> {
     variant: "default" | "secondary" | "destructive" | "outline";
     children: React.ReactNode;
 }
+
+export interface FeaturesCardProps extends HTMLAttributes<HTMLDivElement> {
+    Icon: LucideIcon;
+    title: string;
+    description: string;
+    ctaHref: string;
+}
