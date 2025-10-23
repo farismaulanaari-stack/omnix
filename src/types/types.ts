@@ -64,7 +64,6 @@ export interface CustomBadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 export interface FeaturesCardProps extends HTMLAttributes<HTMLDivElement> {
-    Icon: LucideIcon;
     title: string;
     description: string;
     ctaHref: string;

@@ -15,7 +15,6 @@ import { Button } from "../ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
 
 export function FeaturesCard({
-  Icon,
   title,
   description,
   ctaHref,
