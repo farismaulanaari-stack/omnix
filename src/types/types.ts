@@ -68,4 +68,6 @@ export interface FeaturesCardProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     description: string;
     ctaHref: string;
+    image: string;
+    gridClassName: string;
 }
