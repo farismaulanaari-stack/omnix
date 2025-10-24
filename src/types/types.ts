@@ -42,12 +42,13 @@ export interface PricingCardProps {
     listFeatures: string[];
 }
 
-export interface IndustryCardProps {
+export interface IndustryCardProps extends HTMLAttributes<HTMLDivElement> {
     Icon: LucideIcon;
     title: string;
     description: string;
     href: string;
     industry: "healthcare" | "retail" | "manufacturing" | "technology";
+    className?: string | undefined;
 }
 
 export interface SolutionCardProps {
