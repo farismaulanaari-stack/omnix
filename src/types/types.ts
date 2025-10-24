@@ -47,7 +47,7 @@ export interface IndustryCardProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     description: string;
     href: string;
-    industry: "healthcare" | "retail" | "manufacturing" | "technology";
+    size: "sm" | "md" | "lg" | undefined;
     className?: string | undefined;
 }
 
