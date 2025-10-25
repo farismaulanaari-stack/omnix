@@ -19,9 +19,6 @@ import { SolutionCard } from "../SolutionCard/solution-card";
 import { staticSolutionsData } from "../../../public/data/static-solutions";
 
 export default function SiteHeader() {
-  console.log(staticIndustryData);
-  console.log(staticIndustryData.slice(0, 2));
-  console.log(staticIndustryData.slice(2, 4));
   return (
     <NavigationMenu className="h-20 ring ring-black/20" viewport={false}>
       <div className="container w-full flex items-center justify-between">
@@ -62,7 +59,7 @@ export default function SiteHeader() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
-                      industry={card.industry}
+                      className="w-full shadow-none ring-none border-none"
                     />
                   ))}
                 </div>
@@ -74,7 +71,7 @@ export default function SiteHeader() {
                       title={card.title}
                       description={card.description}
                       href={card.href}
-                      industry={card.industry}
+                      className="w-full shadow-none ring-none border-none"
                     />
                   ))}
                 </div>

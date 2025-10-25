@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils"
-import { cva, type VariantProps } from "class-variance-authority"
 
 import { IndustryCardProps } from "@/types/types"
 import {
@@ -9,36 +8,16 @@ import {
     CardDescription
 } from "../ui/card"
 
-const cardSizes = cva(
-    {
-        variants: {
-            variant: {
-                default: "shadow-none p-2 border-none rounded-xl transition-all duration-200 ease-in-out hover:bg-indigo-100/50"
-            },
-            size: {
-                sm: "w-full h-[60px]",
-                md: "w-full h-[90px]",
-                lg: "w-full h-[150px]"
-            }
-        },
-        defaultVariants: {
-            variant: "default",
-            size: "sm"
-        }
-    }
-)
-
 export function IndustryCard({
     Icon,
     title,
     description,
     href,
-    size,
     className,
     ...props
-} : IndustryCardProps & VariantProps<typeof cardSizes>) {
+} : IndustryCardProps) {
     return (
-        <Card className={cn(size, className)} {...props}>
+        <Card className={cn("w-full h-[90px] p-2 transition-all duration-300 ease-in-out hover:bg-indigo-100/50 border-none ring-0 shadow-none", className)} {...props}>
             <CardHeader className="w-full h-full p-0 flex flex-row items-center gap-2">
                 <div className="w-1/3 h-full rounded-xl bg-indigo-50 flex items-center justify-center">
                     <Icon className="w-8 h-8 text-indigo-600"/>
