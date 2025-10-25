@@ -34,20 +34,20 @@ export default function SiteHeader() {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href={"#about"}>
-                <p className="text-base font-medium text-black">about us</p>
+                <p className="text-lg font-medium text-black">about us</p>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href={"#features"}>
-                <p className="text-base font-medium text-black">features</p>
+                <p className="text-lg font-medium text-black">features</p>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <p className="text-base font-medium text-black">industry</p>
+              <p className="text-lg font-medium text-black">industry</p>
             </NavigationMenuTrigger>
             <NavigationMenuContent className="min-w-[700px] h-fit p-3 shadow-none border-none ring ring-black/20 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
               <div className="w-full h-full flex flex-col gap-4">
@@ -80,7 +80,7 @@ export default function SiteHeader() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
-              <p className="text-base font-medium text-black">solutions</p>
+              <p className="text-lg font-medium text-black">solutions</p>
             </NavigationMenuTrigger>
             <NavigationMenuContent className="min-w-[800px] h-[350px] shadow-none border-none ring ring-black/20 p-4 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
               <div className="min-w-full h-full grid grid-cols-6 grid-rows-3 gap-4">
@@ -99,7 +99,7 @@ export default function SiteHeader() {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href={"#pricing"}>
-                <p className="text-base font-medium text-black">pricing</p>
+                <p className="text-lg font-medium text-black">pricing</p>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
