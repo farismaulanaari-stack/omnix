@@ -17,7 +17,7 @@ export default function Home() {
               </p>
             </div>
 
-              <h2 className="text-4xl font-bold leading-snug text-black md:text-5xl md:leading-snug md:max-w-5xl md:text-center">
+              <h2 className="text-4xl font-bold leading-snug text-black md:text-6xl md:leading-snug md:max-w-6xl md:text-center">
                 mulai terhubung dengan pelanggan anda dalam{" "}
                 <mark className="pb-7 bg-transparent bg-brush md:py-10">
                   satu platform
