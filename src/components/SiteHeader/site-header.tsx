@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,19 +20,24 @@ import { staticIndustryData } from "../../../public/data/static-industry";
 import { SolutionCard } from "../SolutionCard/solution-card";
 import { staticSolutionsData } from "../../../public/data/static-solutions";
 
+import { Menu } from "lucide-react";
+
 export default function SiteHeader() {
   return (
-    <NavigationMenu className="h-20 ring ring-black/20" viewport={false}>
+    <NavigationMenu className="px-3 h-20 ring ring-black/20 md:px-0" viewport={false}>
       <div className="container w-full flex items-center justify-between">
+        {/* Logo container */}
         <div className="w-fit">
           <Image
             src={OmnixLogo}
             alt="omnix-logo-image"
             width={200}
             height={200}
+            className="w-[170px] md:w-[200px]"
           />
         </div>
-        <NavigationMenuList>
+        {/* Navigation menu items */}
+        <NavigationMenuList className="hidden md:flex">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href={"#about"}>
@@ -104,16 +111,26 @@ export default function SiteHeader() {
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
+        {/* Navigation CTA */}
         <div className="w-fit">
           <Button
             variant={"outline"}
-            className="px-6 py-1.5 bg-indigo-200 ring-2 ring-indigo-400 rounded-full transition-all duration-300 ease-in-out hover:bg-indigo-100 hover:ring-2 hover:ring-indigo-600"
+            className="hidden px-6 py-1.5 bg-indigo-200 ring-2 ring-indigo-400 rounded-full transition-all duration-300 ease-in-out hover:bg-indigo-100 hover:ring-2 hover:ring-indigo-600 sm:block"
             asChild
           >
             <Link href={"/contact-us"}>
               <p className="text-base font-medium text-black">contact us</p>
             </Link>
           </Button>
+
+          {/* Menubar button mobile view */}
+            <Button 
+              className="flex justify-center items-center p-0 ring-0 border-none md:hidden"
+              variant={"outline"}
+              size={"icon-lg"}
+            >
+              <Menu strokeWidth={2.5}/>
+            </Button>
         </div>
       </div>
     </NavigationMenu>
