@@ -1,5 +1,7 @@
 "use client";
 
+import { useMobile } from "@/hooks/use-mobile";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +25,7 @@ import { staticSolutionsData } from "../../../public/data/static-solutions";
 import { Menu } from "lucide-react";
 
 export default function SiteHeader() {
+  const { isMobile } = useMobile();
   return (
     <NavigationMenu className="px-3 h-20 ring ring-black/20 md:px-0" viewport={false}>
       <div className="container w-full flex items-center justify-between">
@@ -33,7 +36,6 @@ export default function SiteHeader() {
             alt="omnix-logo-image"
             width={200}
             height={200}
-            className="w-[170px] md:w-[200px]"
           />
         </div>
         {/* Navigation menu items */}
