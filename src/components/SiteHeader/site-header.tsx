@@ -36,6 +36,7 @@ export default function SiteHeader() {
             alt="omnix-logo-image"
             width={200}
             height={200}
+            className="w-[170px] md:w-[200px]"
           />
         </div>
         {/* Navigation menu items */}
