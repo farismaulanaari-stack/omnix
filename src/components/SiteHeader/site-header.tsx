@@ -2,145 +2,14 @@
 
 import { useMobile } from "@/hooks/use-mobile";
 
-import Image from "next/image";
-import Link from "next/link";
-
-import OmnixLogo from "../../../public/images/omnix-logo.svg";
-
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Button } from "../ui/button";
-
-import { IndustryCard } from "../IndustryCard/industry-card";
-import { staticIndustryData } from "../../../public/data/static-industry";
-import { SolutionCard } from "../SolutionCard/solution-card";
-import { staticSolutionsData } from "../../../public/data/static-solutions";
-
-import { Menu } from "lucide-react";
 import { MobileNavigation } from "../MobileNavigation/mobile-navigation";
+import { DesktopNavigation } from "../DesktopNavigation/desktop-navigation";
 
 export default function SiteHeader() {
   const { isMobile } = useMobile();
   return (
     <>
-      {isMobile ? (<MobileNavigation />) : (
-        <NavigationMenu className="px-3 h-20 ring ring-black/20 md:px-0" viewport={false}>
-      <div className="container w-full flex items-center justify-between">
-        {/* Logo container */}
-        <div className="w-fit">
-          <Image
-            src={OmnixLogo}
-            alt="omnix-logo-image"
-            width={200}
-            height={200}
-            className="w-[170px] md:w-[200px]"
-          />
-        </div>
-        {/* Navigation menu items */}
-        <NavigationMenuList className="hidden md:flex">
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link href={"#about"}>
-                <p className="text-lg font-medium text-black">about us</p>
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link href={"#features"}>
-                <p className="text-lg font-medium text-black">features</p>
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <p className="text-lg font-medium text-black">industry</p>
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[700px] h-fit p-3 shadow-none border-none ring ring-black/20 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
-              <div className="w-full h-full flex flex-col gap-4">
-                <div className="w-full flex items-center gap-3">
-                  {staticIndustryData.slice(0, 2).map((card, index) => (
-                    <IndustryCard
-                      key={index}
-                      Icon={card.Icon}
-                      title={card.title}
-                      description={card.description}
-                      href={card.href}
-                      className="w-full shadow-none ring-none border-none"
-                    />
-                  ))}
-                </div>
-                <div className="w-full flex items-center gap-3">
-                  {staticIndustryData.slice(2, 4).map((card, index) => (
-                    <IndustryCard
-                      key={index}
-                      Icon={card.Icon}
-                      title={card.title}
-                      description={card.description}
-                      href={card.href}
-                      className="w-full shadow-none ring-none border-none"
-                    />
-                  ))}
-                </div>
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <p className="text-lg font-medium text-black">solutions</p>
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="min-w-[800px] h-[350px] shadow-none border-none ring ring-black/20 p-4 left-1/2 -translate-x-1/2 data-[motion=from-start]:animate-in data-[motion=from-start]:slide-in-from-bottom-2">
-              <div className="min-w-full h-full grid grid-cols-6 grid-rows-3 gap-4">
-                {staticSolutionsData.map((card, index) => (
-                  <SolutionCard
-                    key={index}
-                    className={card.className}
-                    title={card.title}
-                    description={card.description}
-                    Icon={card.Icon}
-                  />
-                ))}
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link href={"#pricing"}>
-                <p className="text-lg font-medium text-black">pricing</p>
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-        {/* Navigation CTA */}
-        <div className="w-fit">
-          <Button
-            variant={"outline"}
-            className="hidden px-6 py-1.5 bg-indigo-200 ring-2 ring-indigo-400 rounded-full transition-all duration-300 ease-in-out hover:bg-indigo-100 hover:ring-2 hover:ring-indigo-600 sm:block"
-            asChild
-          >
-            <Link href={"/contact-us"}>
-              <p className="text-base font-medium text-black">contact us</p>
-            </Link>
-          </Button>
-
-          {/* Menubar button mobile view */}
-            <Button 
-              className="flex justify-center items-center p-0 ring-0 border-none md:hidden"
-              variant={"outline"}
-              size={"icon-lg"}
-            >
-              <Menu strokeWidth={2.5}/>
-            </Button>
-        </div>
-      </div>
-    </NavigationMenu>
-      )}
+      {isMobile ? (<MobileNavigation />) : (<DesktopNavigation />)}
     </>
   );
 }
