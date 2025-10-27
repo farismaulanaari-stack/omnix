@@ -23,11 +23,14 @@ import { SolutionCard } from "../SolutionCard/solution-card";
 import { staticSolutionsData } from "../../../public/data/static-solutions";
 
 import { Menu } from "lucide-react";
+import { MobileNavigation } from "../MobileNavigation/mobile-navigation";
 
 export default function SiteHeader() {
   const { isMobile } = useMobile();
   return (
-    <NavigationMenu className="px-3 h-20 ring ring-black/20 md:px-0" viewport={false}>
+    <>
+      {isMobile ? (<MobileNavigation />) : (
+        <NavigationMenu className="px-3 h-20 ring ring-black/20 md:px-0" viewport={false}>
       <div className="container w-full flex items-center justify-between">
         {/* Logo container */}
         <div className="w-fit">
@@ -137,5 +140,7 @@ export default function SiteHeader() {
         </div>
       </div>
     </NavigationMenu>
+      )}
+    </>
   );
 }
