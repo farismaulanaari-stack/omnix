@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import {
   FormHTMLAttributes,
   HTMLAttributes,
@@ -69,12 +70,11 @@ export interface CustomBadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode;
 }
 
-export interface FeaturesCardProps extends HTMLAttributes<HTMLDivElement> {
+export interface FeaturesCardProps {
+  index: number;
   title: string;
   description: string;
-  ctaHref: string;
-  image: string;
-  gridClassName: string;
+  image: string | StaticImport;
 }
 
 export interface FooterListItemProps {
