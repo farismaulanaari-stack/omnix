@@ -118,16 +118,24 @@
   --animate-infinite-scroll: 25s infiniteScroll infinite linear;
 
   @keyframes infiniteScroll {
-  from {
-    transform: translateX(0);
-  } to {
-    transform: translateX(-50%);
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
+
+.bg-pattern {
+  background-image: url("../../public/images/jumbotron_pattern.svg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
 }
 
 .bg-brush {
-  background-image: url("../../public//images/brush.svg");
+  background-image: url("../../public/images/brush.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -149,7 +157,7 @@
 }
 
 .pricing-icon-shadow {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.20);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 @layer base {
