@@ -17,9 +17,15 @@ export function FeaturesCard({
   image,
 }: FeaturesCardProps) {
   return (
-    <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-      <CardHeader className="w-full h-[200px] overflow-hidden p-0">
-        <Image src={image} alt={title} layout="fill" objectFit="cover" />
+    <Card className="border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5 transition-all duration-300 ease-in-out shadow-md hover:shadow-xl">
+      <CardHeader className="w-full h-[200px] overflow-hidden p-0 flex items-center justify-start">
+        <Image
+          src={image}
+          alt={title}
+          width={200}
+          height={200}
+          className="h-full object-contain"
+        />
       </CardHeader>
       <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
         <CardTitle className="flex flex-row items-center gap-2.5">
@@ -30,7 +36,6 @@ export function FeaturesCard({
         </CardTitle>
         <CardDescription className="text-sm font-medium text-black max-h-16">
           {description}
-          blanditiis officiis incidunt.
         </CardDescription>
       </CardContent>
     </Card>

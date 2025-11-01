@@ -1,15 +1,7 @@
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ArrowUpRightIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+
+import { staticFeaturesData } from "../../public/data/static-features";
+import { FeaturesCard } from "@/components/FeaturesCard/features-card";
 
 export default function FeaturesPage() {
   return (
@@ -29,103 +21,16 @@ export default function FeaturesPage() {
             potential of our platform
           </p>
         </div>
-        <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-3">
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none border-none ring ring-border rounded-xl p-3.5 flex flex-col gap-2.5">
-            <CardHeader className="w-full h-[200px] overflow-hidden p-0"></CardHeader>
-            <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
-              <CardTitle className="flex flex-row items-center gap-2.5">
-                <span className="text-2xl font-bold italic text-indigo-600">
-                  01.
-                </span>
-                <p className="text-xl font-bold">Lorem, ipsum dolor.</p>
-              </CardTitle>
-              <CardDescription className="text-sm font-medium text-black max-h-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Sapiente nemo exercitationem atque consequatur natus ipsam
-                veniam voluptates blanditiis officiis incidunt.
-              </CardDescription>
-            </CardContent>
-          </Card>
+        <div className="w-full grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {staticFeaturesData.map((feature) => (
+            <FeaturesCard
+              key={feature.index}
+              title={feature.title}
+              description={feature.description}
+              index={feature.index}
+              image={feature.image}
+            />
+          ))}
         </div>
       </div>
     </section>
