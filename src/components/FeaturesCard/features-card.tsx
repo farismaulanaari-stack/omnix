@@ -30,7 +30,7 @@ export function FeaturesCard({
       <CardContent className="w-full h-fit flex flex-col gap-1.5 p-0">
         <CardTitle className="flex flex-row items-center gap-2.5">
           <span className="text-2xl font-bold italic text-indigo-600">
-            0{index + 1}.
+            0{index}.
           </span>
           <p className="text-xl font-bold">{title}</p>
         </CardTitle>
