@@ -84,3 +84,11 @@ export interface FooterListItemProps {
     href: string;
   }[];
 }
+
+export interface TestimonialCardProps {
+  name: string;
+  role: string;
+  company: string;
+  rating: number;
+  testimonial: string;
+}
