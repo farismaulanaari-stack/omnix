@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import DashboardMock from "../../public/images/dummy-dashboard.svg";
+import DashboardMock from "../../public/images/dashboard_example.svg";
 import MobileMock from "../../public/images/mobile.svg";
 
 export default function Home() {
@@ -17,12 +17,12 @@ export default function Home() {
               </p>
             </div>
 
-              <h2 className="text-4xl font-bold leading-snug text-black md:text-6xl md:leading-snug md:max-w-6xl md:text-center">
-                mulai terhubung dengan pelanggan anda dalam{" "}
-                <mark className="pb-7 bg-transparent bg-brush md:py-10">
-                  satu platform
-                </mark>
-              </h2>
+            <h2 className="text-4xl font-bold leading-snug text-black md:text-6xl md:leading-snug md:max-w-6xl md:text-center">
+              mulai terhubung dengan pelanggan anda dalam{" "}
+              <mark className="pb-7 bg-transparent bg-brush md:py-10">
+                satu platform
+              </mark>
+            </h2>
           </div>
 
           {/* Mock section */}
@@ -39,7 +39,7 @@ export default function Home() {
             {/* Dashboard mock */}
             <div className="hidden w-full overflow-hidden md:block">
               <div className="p-6 bg-gray-200 rounded-xl">
-                <Image 
+                <Image
                   src={DashboardMock}
                   alt="dashboard-mock-image"
                   className="w-full h-full object-cover object-top rounded-md"
