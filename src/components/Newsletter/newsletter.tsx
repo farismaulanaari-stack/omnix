@@ -1,5 +1,6 @@
 "use client";
 
+import { useLoading } from "@/hooks/use-loading";
 import { cn } from "@/lib/utils";
 
 import { Input } from "../ui/input";
@@ -7,8 +8,10 @@ import { Button } from "../ui/button";
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NewsLetterData, NewsLetterProps } from "@/types/types";
+import { Spinner } from "../ui/spinner";
 
 export function NewsletterComponent({ className }: NewsLetterProps) {
+  // usestate for save loading state
   const {
     register,
     handleSubmit,
@@ -18,7 +21,13 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
 
   const onSubmit: SubmitHandler<NewsLetterData> = (data) => {
     if (isValid) resetField("email_address");
+    console.log(data);
   };
+
+  // useLoading returns { isLoading, trigger }
+  // trigger should be passed to react-hook-form's handleSubmit so
+  // the loading lifecycle starts when the form is submitted.
+  const { isLoading, trigger } = useLoading(1000, onSubmit);
   return (
     <div
       className={cn(
@@ -36,7 +45,7 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
           aenean lectus tincidunt nibh ut pellentesque pulvinar ipsum at.
         </p>
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(trigger)}
           className="flex flex-col items-start justify-center gap-3 w-fit"
         >
           <div className="flex flex-row items-center justify-between gap-3 w-fit">
@@ -57,9 +66,10 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
               variant={"default"}
               size={"default"}
               type="submit"
-              className="bg-indigo-600 text-white px-6 hover:bg-indigo-950 active:bg-indigo-800"
+              className="bg-indigo-600 text-white px-6 hover:bg-indigo-950 active:bg-indigo-800 w-28"
+              disabled={isLoading ? true : false}
             >
-              subscribe
+              {isLoading ? <Spinner /> : "subscribe"}
             </Button>
           </div>
           {/* validation message */}
