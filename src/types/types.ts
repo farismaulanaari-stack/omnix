@@ -97,3 +97,11 @@ export interface SelectGroupProp
   }[];
   placeholder?: string;
 }
+
+export interface NewsLetterProps extends HTMLAttributes<HTMLDivElement> {
+  className?: string | undefined;
+}
+
+export interface NewsLetterData {
+  email_address: string;
+}
