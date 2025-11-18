@@ -17,10 +17,12 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
+    reset,
   } = useForm<ContactUsData>();
 
   const onSubmit: SubmitHandler<ContactUsData> = (data) => {
+    if (isValid) reset();
     console.log(data);
   };
 
@@ -38,7 +40,6 @@ export function ContactForm() {
               className="placeholder:text-black/50 placeholder:text-sm placeholder:font-medium"
               placeholder="ex: Jhon Doe"
               errorMsg={errors.full_name?.message}
-              required
               aria-invalid={errors.full_name ? "true" : "false"}
               {...register("full_name", {
                 required: "Full name is required",
@@ -54,7 +55,6 @@ export function ContactForm() {
               className="placeholder:text-black/50 placeholder:text-sm placeholder:font-medium"
               placeholder="ex: jhondoe@email.com"
               errorMsg={errors.email_address?.message}
-              required
               aria-invalid={errors.email_address ? "true" : "false"}
               {...register("email_address", {
                 required: "Email address is required",
@@ -72,7 +72,6 @@ export function ContactForm() {
               className="placeholder:text-black/50 placeholder:text-sm placeholder:font-medium"
               placeholder="PT. Omnix Indonesia"
               errorMsg={errors.company_or_organization?.message}
-              required
               aria-invalid={errors.company_or_organization ? "true" : "false"}
               {...register("company_or_organization", {
                 required: "Company or Organization is required",
@@ -89,7 +88,6 @@ export function ContactForm() {
               className="placeholder:text-black/50 placeholder:text-sm placeholder:font-medium"
               placeholder="ex: +62 8123456789"
               errorMsg={errors.phone_number?.message}
-              required
               aria-invalid={errors.phone_number ? "true" : "false"}
               {...register("phone_number", {
                 required: "Phone number is required",
@@ -118,7 +116,6 @@ export function ContactForm() {
             label="Tell us about your business inquiries"
             htmlFor="message_text"
             className="text-base font-normal text-black min-h-[200px] resize-none"
-            required
             aria-invalid={errors.message_text ? "true" : "false"}
             {...register("message_text", {
               required: "Message text is required",
@@ -132,6 +129,7 @@ export function ContactForm() {
             <Button
               className="w-full bg-indigo-600 group transition-all duration-300 ease-in-out hover:bg-indigo-800 py-5 h-12"
               size={"icon-lg"}
+              type="submit"
             >
               <span className="flex flex-row items-center gap-1">
                 <p className="text-white font-semibold text-base">
