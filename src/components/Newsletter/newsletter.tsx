@@ -3,6 +3,7 @@
 import { useLoading } from "@/hooks/use-loading";
 import { cn } from "@/lib/utils";
 
+import { toast } from "sonner";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
@@ -22,6 +23,13 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
   const onSubmit: SubmitHandler<NewsLetterData> = (data) => {
     if (isValid) resetField("email_address");
     console.log(data);
+    toast.success("Success register on newsletter", {
+      description: "your email is registered as a newsletter recipient",
+      classNames: {
+        title: "font-bold",
+        description: "font-medium",
+      },
+    });
   };
 
   // useLoading returns { isLoading, trigger }
