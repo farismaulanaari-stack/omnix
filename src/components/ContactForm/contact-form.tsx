@@ -7,10 +7,6 @@ import { TextareaGroup } from "../TextareaGroup/textarea-group";
 import { SelectGroup } from "../SelectGroup/select-group";
 import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-input-wrapper";
 
-import { Card, CardContent } from "../ui/card";
-import { Button } from "../ui/button";
-
-import { SendHorizonal } from "lucide-react";
 import { ContactUsData } from "@/types/types";
 import { Form } from "../Form/form";
 
