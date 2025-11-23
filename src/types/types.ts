@@ -113,6 +113,9 @@ export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   formButton: boolean;
 }
 
-export interface formFooterProps extends HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+export interface FormButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement> {
+  textButton: string;
+  Icon?: LucideIcon;
+  loading?: boolean;
 }

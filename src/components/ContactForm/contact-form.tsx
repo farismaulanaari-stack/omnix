@@ -8,10 +8,10 @@ import { SelectGroup } from "../SelectGroup/select-group";
 import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-input-wrapper";
 
 import { Button } from "../ui/button";
-import { SendIcon } from "lucide-react";
+import { SendHorizonal } from "lucide-react";
 
 import { ContactUsData } from "@/types/types";
-import { Form, FormFooter } from "../Form/form";
+import { Form } from "../Form/form";
 
 export function ContactForm() {
   const {
@@ -119,16 +119,6 @@ export function ContactForm() {
           },
         })}
       />
-      <FormFooter>
-        <Button
-          variant={"default"}
-          size={"lg"}
-          className="w-full bg-linear-to-r from-indigo-600 to-indigo-800 flex flex-row gap-1.5 group"
-        >
-          <p className="text-base font-medium">send your message</p>
-          <SendIcon className="size-5 transition duration-500 ease-in-out group-hover:rotate-45" />
-        </Button>
-      </FormFooter>
     </Form>
   );
 }
