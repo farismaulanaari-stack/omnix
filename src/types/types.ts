@@ -2,8 +2,6 @@ import * as SelectPrim from "@radix-ui/react-select";
 import { LucideIcon } from "lucide-react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import {
-  ButtonHTMLAttributes,
-  FormHTMLAttributes,
   HTMLAttributes,
   InputHTMLAttributes,
   TextareaHTMLAttributes,
@@ -106,16 +104,4 @@ export interface NewsLetterProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface NewsLetterData {
   email_address: string;
-}
-
-export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
-  children: React.ReactNode;
-  formButton: boolean;
-}
-
-export interface FormButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
-  textButton: string;
-  Icon?: LucideIcon;
-  loading?: boolean;
 }
