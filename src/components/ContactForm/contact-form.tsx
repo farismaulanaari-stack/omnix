@@ -1,6 +1,6 @@
 "use client";
 
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 
 import { InputGroup } from "../InputGroup/input-group";
 import { TextareaGroup } from "../TextareaGroup/textarea-group";
@@ -9,13 +9,15 @@ import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-inp
 
 import { ContactUsData } from "@/types/types";
 import { Form } from "../Form/form";
+import { useLoading } from "@/hooks/use-loading";
 
 export function ContactForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid, isSubmitted },
+    formState: { errors, isValid },
     reset,
+    control,
   } = useForm<ContactUsData>();
 
   const onSubmit: SubmitHandler<ContactUsData> = (data) => {
@@ -23,8 +25,10 @@ export function ContactForm() {
     console.log(data);
   };
 
+  const { isLoading, trigger } = useLoading(1500, onSubmit);
+
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} formButton>
+    <Form onSubmit={handleSubmit(trigger)} formButton loading={isLoading}>
       <HorizontalInputWrapper>
         <InputGroup
           label="Full name"
@@ -89,20 +93,31 @@ export function ContactForm() {
           })}
         />
       </HorizontalInputWrapper>
-      {/* <SelectGroup
-        label="Choose omnix service"
-        htmlFor="omnix_service"
-        placeholder="Select a service..."
-        options={[
-          { label: "Service A", value: "service_a" },
-          { label: "Service B", value: "service_b" },
-          { label: "Service C", value: "service_c" },
-        ]}
-        className="focus-visible:border-indigo-600 focus-visible:ring-indigo-100 focus-visible:ring-[3px]"
-        {...register("omnix_service", {
-          required: "Omnix service is required",
-        })}
-      /> */}
+      <Controller
+        control={control}
+        name="omnix_service"
+        rules={{
+          required: {
+            value: true,
+            message: "omnix service is required, please choose one.",
+          },
+        }}
+        render={({ field }) => (
+          <SelectGroup
+            label="Choose omnix service"
+            htmlFor="omnix_service"
+            placeholder="Select a service..."
+            options={[
+              { label: "Service A", value: "service_a" },
+              { label: "Service B", value: "service_b" },
+              { label: "Service C", value: "service_c" },
+            ]}
+            className="focus-visible:border-indigo-600 focus-visible:ring-indigo-100 focus-visible:ring-[3px]"
+            value={field.value}
+            onvalchange={field.onChange}
+          />
+        )}
+      />
       <TextareaGroup
         label="Tell us about your business inquiries"
         htmlFor="message_text"

@@ -98,6 +98,8 @@ export interface SelectGroupProp
     label: string;
   }[];
   placeholder?: string;
+  value: string;
+  onvalchange: (service: string) => void;
 }
 
 export interface NewsLetterProps extends HTMLAttributes<HTMLDivElement> {
@@ -111,6 +113,7 @@ export interface NewsLetterData {
 export interface FormProps extends FormHTMLAttributes<HTMLFormElement> {
   children: React.ReactNode;
   formButton: boolean;
+  loading?: boolean;
 }
 
 export interface FormButtonProps

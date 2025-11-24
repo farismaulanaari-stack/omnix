@@ -16,6 +16,8 @@ export function SelectGroup({
   className,
   options,
   placeholder,
+  value,
+  onvalchange,
   ...props
 }: SelectGroupProp) {
   return (
@@ -23,7 +25,7 @@ export function SelectGroup({
       <Label htmlFor={htmlFor} className="text-sm font-semibold text-black">
         {label}
       </Label>
-      <Select {...props}>
+      <Select {...props} onValueChange={onvalchange}>
         <SelectTrigger className={cn("w-full", className)}>
           <SelectValue
             placeholder={placeholder || "Select an option"}

@@ -6,8 +6,14 @@ import { FormButtonProps, FormProps } from "@/types/types";
 import { CardContent, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
 import { SendIcon } from "lucide-react";
+import { Spinner } from "../ui/spinner";
 
-export function Form({ children, formButton = false, ...props }: FormProps) {
+export function Form({
+  children,
+  formButton = false,
+  loading,
+  ...props
+}: FormProps) {
   return (
     <form
       className={cn(
@@ -20,7 +26,9 @@ export function Form({ children, formButton = false, ...props }: FormProps) {
         {children}
       </CardContent>
       <CardFooter>
-        {formButton && <FormButton textButton="send your message" />}
+        {formButton && (
+          <FormButton textButton="send your message" loading={loading} />
+        )}
       </CardFooter>
     </form>
   );
@@ -42,11 +50,17 @@ function FormButton({
         props.className
       )}
     >
-      <p className="text-base font-semibold">
-        {textButton ? textButton : "text button here"}
-      </p>
-      {Icon && (
-        <Icon className="size-5 transition duration-500 ease-in-out group-hover:rotate-45" />
+      {loading ? (
+        <Spinner className="size-5" />
+      ) : (
+        <>
+          <p className="text-base font-semibold">
+            {textButton ? textButton : "text button here"}
+          </p>
+          {Icon && (
+            <Icon className="size-5 transition duration-500 ease-in-out group-hover:rotate-45" />
+          )}
+        </>
       )}
     </Button>
   );
