@@ -113,3 +113,10 @@ export interface FormButtonProps
   Icon?: LucideIcon;
   loading?: boolean;
 }
+
+export interface OverviewCardProps extends HTMLAttributes<HTMLDivElement> {
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+  href: string;
+}
