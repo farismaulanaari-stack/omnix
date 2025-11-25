@@ -7,7 +7,7 @@ import { TextareaGroup } from "../TextareaGroup/textarea-group";
 import { SelectGroup } from "../SelectGroup/select-group";
 import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-input-wrapper";
 
-import { ContactUsData } from "@/types/types";
+import { ContactUsTypes } from "@/types/contact-us-types";
 import { Form } from "../Form/form";
 import { useLoading } from "@/hooks/use-loading";
 import { toast } from "sonner";
@@ -19,9 +19,9 @@ export function ContactForm() {
     formState: { errors, isValid },
     reset,
     control,
-  } = useForm<ContactUsData>();
+  } = useForm<ContactUsTypes>();
 
-  const onSubmit: SubmitHandler<ContactUsData> = (data) => {
+  const onSubmit: SubmitHandler<ContactUsTypes> = (data) => {
     if (isValid) reset();
     toast.success(`congrats! ${data.full_name}, your message has been sent.`, {
       description:
