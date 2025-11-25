@@ -13,7 +13,7 @@ export function useContactForm() {
       company_or_organization: "",
       phone_number: "",
       omnix_service: "",
-      message: "",
+      message_text: "",
     },
   });
 

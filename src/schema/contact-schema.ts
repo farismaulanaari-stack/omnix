@@ -12,7 +12,7 @@ export const contactUsSchema = z.object({
     .min(3, "phone must be at least 3 characters long"),
   email_address: z.email("email is required").includes("@"),
   omnix_service: z.string("please choose a service."),
-  message: z
+  message_text: z
     .string("message is required")
     .min(10, "message must be at least 10 characters long"),
 });

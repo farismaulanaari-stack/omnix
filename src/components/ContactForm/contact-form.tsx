@@ -1,37 +1,24 @@
 "use client";
 
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useContactForm } from "@/hooks/use-contact-form";
+import { Controller } from "react-hook-form";
 
 import { InputGroup } from "../InputGroup/input-group";
 import { TextareaGroup } from "../TextareaGroup/textarea-group";
 import { SelectGroup } from "../SelectGroup/select-group";
 import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-input-wrapper";
-
-import { ContactUsTypes } from "@/types/contact-us-types";
 import { Form } from "../Form/form";
-import { useLoading } from "@/hooks/use-loading";
-import { toast } from "sonner";
+
+import { omnixServiceConstants } from "@/constants/omnix-service";
 
 export function ContactForm() {
+  const { form, isLoading, trigger } = useContactForm();
   const {
-    register,
     handleSubmit,
-    formState: { errors, isValid },
-    reset,
+    register,
     control,
-  } = useForm<ContactUsTypes>();
-
-  const onSubmit: SubmitHandler<ContactUsTypes> = (data) => {
-    if (isValid) reset();
-    toast.success(`congrats! ${data.full_name}, your message has been sent.`, {
-      description:
-        "The message you created has been sent and received by Omnix",
-      className: "w-max p-4",
-    });
-    console.log(data);
-  };
-
-  const { isLoading, trigger } = useLoading(1500, onSubmit);
+    formState: { errors },
+  } = form;
 
   return (
     <Form onSubmit={handleSubmit(trigger)} formButton loading={isLoading}>
@@ -43,13 +30,7 @@ export function ContactForm() {
           placeholder="ex: Jhon Doe"
           errorMsg={errors.full_name?.message}
           aria-invalid={errors.full_name ? "true" : "false"}
-          {...register("full_name", {
-            required: "Full name is required",
-            minLength: {
-              value: 3,
-              message: "Full name must be at least 3 characters",
-            },
-          })}
+          {...register("full_name")}
         />
         <InputGroup
           label="Email address"
@@ -58,13 +39,7 @@ export function ContactForm() {
           placeholder="ex: jhondoe@email.com"
           errorMsg={errors.email_address?.message}
           aria-invalid={errors.email_address ? "true" : "false"}
-          {...register("email_address", {
-            required: "Email address is required",
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Invalid email address",
-            },
-          })}
+          {...register("email_address")}
         />
       </HorizontalInputWrapper>
       <HorizontalInputWrapper>
@@ -75,13 +50,7 @@ export function ContactForm() {
           placeholder="PT. Omnix Indonesia"
           errorMsg={errors.company_or_organization?.message}
           aria-invalid={errors.company_or_organization ? "true" : "false"}
-          {...register("company_or_organization", {
-            required: "Company or Organization is required",
-            minLength: {
-              value: 3,
-              message: "Company or Organization must be at least 3 characters",
-            },
-          })}
+          {...register("company_or_organization")}
         />
         <InputGroup
           label="Phone number"
@@ -90,34 +59,18 @@ export function ContactForm() {
           placeholder="ex: +62 8123456789"
           errorMsg={errors.phone_number?.message}
           aria-invalid={errors.phone_number ? "true" : "false"}
-          {...register("phone_number", {
-            required: "Phone number is required",
-            minLength: {
-              value: 10,
-              message: "Phone number must be at least 10 characters",
-            },
-          })}
+          {...register("phone_number")}
         />
       </HorizontalInputWrapper>
       <Controller
         control={control}
         name="omnix_service"
-        rules={{
-          required: {
-            value: true,
-            message: "omnix service is required, please choose one.",
-          },
-        }}
         render={({ field }) => (
           <SelectGroup
             label="Choose omnix service"
             htmlFor="omnix_service"
             placeholder="Select a service..."
-            options={[
-              { label: "Service A", value: "service_a" },
-              { label: "Service B", value: "service_b" },
-              { label: "Service C", value: "service_c" },
-            ]}
+            options={omnixServiceConstants}
             className="focus-visible:border-indigo-600 focus-visible:ring-indigo-100 focus-visible:ring-[3px]"
             value={field.value}
             onvalchange={field.onChange}
