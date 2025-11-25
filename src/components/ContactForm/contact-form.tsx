@@ -10,6 +10,7 @@ import { HorizontalInputWrapper } from "../HorizontalInputWrapper/horizontal-inp
 import { ContactUsData } from "@/types/types";
 import { Form } from "../Form/form";
 import { useLoading } from "@/hooks/use-loading";
+import { toast } from "sonner";
 
 export function ContactForm() {
   const {
@@ -22,6 +23,11 @@ export function ContactForm() {
 
   const onSubmit: SubmitHandler<ContactUsData> = (data) => {
     if (isValid) reset();
+    toast.success(`congrats! ${data.full_name}, your message has been sent.`, {
+      description:
+        "The message you created has been sent and received by Omnix",
+      className: "w-max p-4",
+    });
     console.log(data);
   };
 
