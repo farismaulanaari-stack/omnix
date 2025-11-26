@@ -6,7 +6,7 @@ import { staticPricingData } from "../../public/data/static-pricing";
 export default function PricingPage() {
   return (
     <section
-      className="w-full bg-linear-180 from-white from-50% to-indigo-600 pt-36"
+      className="px-4 w-full bg-linear-180 from-white from-50% to-indigo-600 pt-36 pb-16 lg:px-0 lg:pb-0"
       id="omnix-pricing-plan"
     >
       <div className="container mx-auto flex flex-col gap-20">
@@ -27,7 +27,7 @@ export default function PricingPage() {
             </p>
           </div>
         </div>
-        <div className="w-full flex items-end justify-between gap-4 overflow-hidden pt-2">
+        <div className="w-full flex flex-col items-end justify-between gap-6 overflow-hidden pt-2 lg:gap-4 lg:flex-row">
           <PricingCard data={staticPricingData} />
         </div>
       </div>
