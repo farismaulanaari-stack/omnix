@@ -7,7 +7,7 @@ export const staticFooterData: FooterListItemProps[] = [
       { label: "About omnix", href: "/#about-omnix" },
       { label: "Omnix core features", href: "/#omnix-core-features" },
       { label: "Omnix pricing plan", href: "/#omnix-pricing-plan" },
-      { label: "Omnix testimonials", href: "/#omnix-testimonials" },
+      { label: "Omnix testimonials", href: "/#omnix-testimonial" },
       { label: "Get in touch with omnix", href: "/contact-us" },
     ],
   },
