@@ -25,9 +25,9 @@ export function BrandScrollable() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden py-10 bg-slate-100">
+    <section className="relative w-full overflow-hidden py-10">
       <div className="w-full mb-14">
-        <p className="text-base text-center font-medium text-indigo-600">
+        <p className="text-base text-center font-semibold text-indigo-600">
           industrial partner's
         </p>
         <h2 className="text-2xl font-bold text-center capitalize">
@@ -35,8 +35,8 @@ export function BrandScrollable() {
         </h2>
       </div>
       {/* gradient kanan kiri */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-3/12 bg-gradient-to-r from-slate-100 from-20% to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-3/12 bg-gradient-to-l from-slate-100 from-20% to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-3/12 bg-gradient-to-r from-white from-20% to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-3/12 bg-gradient-to-l from-white from-20% to-transparent z-10" />
 
       {/* container animasi scroll */}
       <div className="flex w-max animate-infinite-scroll">
@@ -50,7 +50,7 @@ export function BrandScrollable() {
               alt={brand.alt}
               width={150}
               height={150}
-              className="object-contain"
+              className="object-contain grayscale-100"
             />
           </div>
         ))}
