@@ -25,7 +25,9 @@ export function MobileNavigation() {
     <NavigationMenu className="w-full px-3 h-20 border-b border-b-black/20">
       <ul className="w-full h-full flex items-center justify-between">
         <NavigationMenuItem>
-          <Image src={OmnixLogo} alt="omnix-logo" width={170} />
+          <Link href={"/"}>
+            <Image src={OmnixLogo} alt="omnix-logo" width={170} />
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Sheet>
@@ -99,15 +101,17 @@ export function MobileNavigation() {
               </div>
               {/* footer CTA */}
               <SheetFooter className="w-full">
-                <Button
-                  variant={"outline"}
-                  className="ring-2 ring-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100"
-                  size={"lg"}
-                >
-                  <p className="text-lg font-semibold capitalize">
-                    get in touch with us
-                  </p>
-                </Button>
+                <Link href={"/contact-us"} className="w-full">
+                  <Button
+                    variant={"outline"}
+                    className="w-full ring-2 ring-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100"
+                    size={"lg"}
+                  >
+                    <p className="text-lg font-semibold capitalize">
+                      get in touch with us
+                    </p>
+                  </Button>
+                </Link>
               </SheetFooter>
             </SheetContent>
           </Sheet>

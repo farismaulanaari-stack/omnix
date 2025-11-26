@@ -26,12 +26,14 @@ export function DesktopNavigation() {
       <div className="container w-full flex items-center justify-between">
         {/* Logo container */}
         <div className="w-fit">
-          <Image
-            src={OmnixLogo}
-            alt="omnix-logo-image"
-            width={200}
-            height={200}
-          />
+          <Link href={"/"}>
+            <Image
+              src={OmnixLogo}
+              alt="omnix-logo-image"
+              width={200}
+              height={200}
+            />
+          </Link>
         </div>
         {/* Navigation menu items */}
         <NavigationMenuList>
