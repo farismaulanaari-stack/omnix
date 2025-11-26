@@ -39,16 +39,16 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
   return (
     <div
       className={cn(
-        "w-full h-[300px] bg-black rounded-xl rounded-t-none flex flex-row gap-3 justify-center items-center",
+        "w-full h-[300px] px-4 bg-black rounded-xl rounded-t-none flex flex-row gap-3 justify-center items-center lg:px-0",
         className
       )}
     >
       <div className="w-full max-w-[996px] flex flex-col gap-6">
-        <h2 className="text-white font-bold text-4xl max-w-3xl">
+        <h2 className="text-white font-bold text-xl max-w-3xl lg:text-4xl">
           Get all of our updates directly to your inbox. Sign up for our
           newsletter.
         </h2>
-        <p className="text-white font-normal text-base max-w-xl">
+        <p className="text-white font-normal text-sm max-w-xl lg:text-base">
           Lorem ipsum elit nascetur sed a elit et ullamcorper pretium elementum
           aenean lectus tincidunt nibh ut pellentesque pulvinar ipsum at.
         </p>

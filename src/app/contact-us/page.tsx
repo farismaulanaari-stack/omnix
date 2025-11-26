@@ -14,7 +14,7 @@ import { MapPin } from "lucide-react";
 export default function ContactUsPage() {
   return (
     <>
-      <Card className="w-full bg-transparent shadow-none border-none">
+      <Card className="hidden w-full bg-transparent shadow-none border-none lg:flex">
         <CardHeader>
           <CardTitle className="text-5xl font-bold text-black leading-snug">
             get in touch -- <span className="block">with us</span>
