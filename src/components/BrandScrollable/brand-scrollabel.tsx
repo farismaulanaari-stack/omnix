@@ -8,7 +8,7 @@ import SamsungIcon from "../../../public/images/icons/samsung_icon.svg";
 import AmazonIcon from "../../../public/images/icons/amazon_icon.svg";
 import IkeaIcon from "../../../public/images/icons/ikea_icon.svg";
 import LgElectronicsIcon from "../../../public/images/icons/lg_icon.svg";
-import ShellIcon from "../../../public/images/icons/shell_icon.svg";
+import AstonMartinIcon from "../../../public/images/icons/aston_martin_icon.svg";
 import AnytimeFitnessIcon from "../../../public/images/icons/anytime_fitness_icon.svg";
 import KimiaFarmaIcon from "../../../public/images/icons/kimia_farma_icon.svg";
 
@@ -19,7 +19,7 @@ export function BrandScrollable() {
     { src: AmazonIcon, alt: "Amazon" },
     { src: IkeaIcon, alt: "IKEA" },
     { src: LgElectronicsIcon, alt: "lg electronics" },
-    { src: ShellIcon, alt: "Shell" },
+    { src: AstonMartinIcon, alt: "Aston Martin" },
     { src: AnytimeFitnessIcon, alt: "Anytime Fitness" },
     { src: KimiaFarmaIcon, alt: "Kimia Farma" },
   ];
