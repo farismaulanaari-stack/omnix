@@ -14,7 +14,7 @@ import { Separator } from "@/components/ui/separator";
 export default function AboutSection() {
   return (
     // main section (about page)
-    <section className="w-full pt-36 pb-16">
+    <section className="w-full pt-36 pb-16" id="about-omnix">
       {/* container section */}
       <div className="container w-full mx-auto">
         <div className="w-full flex flex-col-reverse items-center justify-start gap-10 px-5 lg:flex-row lg:gap-6">

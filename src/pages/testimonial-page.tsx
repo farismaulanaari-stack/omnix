@@ -4,7 +4,7 @@ import { staticTestimonialsData } from "../../public/data/static-testimonials";
 export default function TestimonialPage() {
   return (
     // main section (testimonial page)
-    <section className="w-full pt-36 pb-16 px-3 lg:px-0">
+    <section className="w-full pt-36 pb-16 px-3 lg:px-0" id="omnix-testimonial">
       {/* container section */}
       <div className="container mx-auto flex flex-col gap-10">
         {/* content items */}

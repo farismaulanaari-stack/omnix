@@ -5,7 +5,10 @@ import { staticPricingData } from "../../public/data/static-pricing";
 
 export default function PricingPage() {
   return (
-    <section className="w-full bg-linear-180 from-white from-50% to-indigo-600 pt-36">
+    <section
+      className="w-full bg-linear-180 from-white from-50% to-indigo-600 pt-36"
+      id="omnix-pricing-plan"
+    >
       <div className="container mx-auto flex flex-col gap-20">
         <div className="w-full flex flex-col items-center gap-3.5">
           <div className="w-fit px-6 py-1 ring-2 ring-indigo-600 bg-indigo-200 rounded-full">

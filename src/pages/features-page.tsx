@@ -5,7 +5,10 @@ import { FeaturesCard } from "@/components/FeaturesCard/features-card";
 
 export default function FeaturesPage() {
   return (
-    <section className="w-full px-3 pt-36 pb-16 lg:px-0">
+    <section
+      className="w-full px-3 pt-36 pb-16 lg:px-0"
+      id="omnix-core-features"
+    >
       <div className="container w-full flex flex-col gap-20 mx-auto">
         <div className="w-full flex flex-col gap-3.5 items-center">
           <div className="w-fit px-4 py-1 bg-indigo-200 ring-2 ring-indigo-600 rounded-full lg:px-6">
