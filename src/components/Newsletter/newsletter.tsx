@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { NewsLetterData, NewsLetterProps } from "@/types/types";
 import { Spinner } from "../ui/spinner";
+import { newsletterService } from "@/service/newsletterService";
 
 export function NewsletterComponent({ className }: NewsLetterProps) {
   // usestate for save loading state
@@ -20,16 +21,21 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
     resetField,
   } = useForm<NewsLetterData>();
 
-  const onSubmit: SubmitHandler<NewsLetterData> = (data) => {
-    if (isValid) resetField("email_address");
-    console.log(data);
-    toast.success("Success register on newsletter", {
-      description: "your email is registered as a newsletter recipient",
-      classNames: {
-        title: "font-bold",
-        description: "font-medium",
-      },
-    });
+  const onSubmit: SubmitHandler<NewsLetterData> = async (data) => {
+    if (isValid) {
+      const newsLetter = await newsletterService(data);
+      toast.success("Bagus! selamat datang di omnix newsletter.", {
+        description:
+          "kami telah mengirim email konfirmasi, mohon untuk cek inbox anda",
+        classNames: {
+          title: "font-bold",
+          description: "font-medium",
+          toast: "w-max",
+        },
+      });
+
+      resetField("email_address");
+    }
   };
 
   // useLoading returns { isLoading, trigger }
