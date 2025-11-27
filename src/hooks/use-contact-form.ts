@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactUsSchema, type ContactUsTypes } from "@/schema/contact-schema";
 import { toast } from "sonner";
+import { contactUsService } from "@/service/contactUsService";
 
 export function useContactForm() {
   const form = useForm<ContactUsTypes>({
@@ -17,12 +18,12 @@ export function useContactForm() {
     },
   });
 
-  const onSubmit = (data: ContactUsTypes) => {
+  const onSubmit = async (data: ContactUsTypes) => {
+    const sendContactData = await contactUsService(data);
     toast.success(`Congrats! ${data.full_name}, your message has been sent.`, {
       description: "The Omnix team has received your message.",
       className: "w-max p-4",
     });
-
     form.reset();
   };
 
