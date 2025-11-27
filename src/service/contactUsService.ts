@@ -10,11 +10,7 @@ export const contactUsService = async (data: ContactUsTypes) => {
     const sendMessage = await emailjs.send(
       "service_5ng4tay",
       "template_cw25oia",
-      {
-        from_name: data.full_name,
-        from_email: data.email_address,
-        message: data.message_text,
-      },
+      data,
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
     );
 
