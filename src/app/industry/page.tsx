@@ -2,6 +2,7 @@ import { BrandScrollable } from "@/components/BrandScrollable/brand-scrollabel";
 import IndustriesHealthcarePage from "@/pages/industries-healthcare";
 import IndustriesHeroSection from "@/pages/industries-hero-section";
 import IndustriesIntroSection from "@/pages/industries-intro-section";
+import IndustriesTechnologyPage from "@/pages/industries-technology";
 
 export default function IndustriesPage() {
   return (
@@ -10,6 +11,7 @@ export default function IndustriesPage() {
       <BrandScrollable />
       <IndustriesIntroSection />
       <IndustriesHealthcarePage />
+      <IndustriesTechnologyPage />
     </>
   );
 }
