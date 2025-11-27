@@ -3,7 +3,7 @@ import RetailIllustration from "../../public/images/retail-illustration.svg";
 
 export default function IndustriesRetailPage() {
   return (
-    <section className="w-full h-screen px-6 lg:px-0" id="manufacture">
+    <section className="w-full h-screen px-6 lg:px-0" id="retail">
       <div className="container mx-auto h-full flex flex-row justify-center items-center">
         <div className="flex flex-col gap-10 justify-between items-center lg:flex-row lg:gap-0">
           <div className="w-fit flex flex-row justify-center items-center lg:w-full">
