@@ -3,6 +3,7 @@ import IndustriesHealthcarePage from "@/pages/industries-healthcare";
 import IndustriesHeroSection from "@/pages/industries-hero-section";
 import IndustriesIntroSection from "@/pages/industries-intro-section";
 import IndustriesManufacturePage from "@/pages/industries-manufacture";
+import IndustriesRetailPage from "@/pages/industries-retail";
 import IndustriesTechnologyPage from "@/pages/industries-technology";
 
 export default function IndustriesPage() {
@@ -14,6 +15,7 @@ export default function IndustriesPage() {
       <IndustriesHealthcarePage />
       <IndustriesTechnologyPage />
       <IndustriesManufacturePage />
+      <IndustriesRetailPage />
     </>
   );
 }

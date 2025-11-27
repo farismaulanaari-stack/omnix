@@ -9,7 +9,7 @@ export default function IndustriesManufacturePage() {
           <div className="w-fit flex flex-row justify-center items-center lg:w-full">
             <Image
               src={ManufactureIllustration}
-              alt="healthcare illustration"
+              alt="manufacture illustration"
             />
           </div>
           <div className="w-fit flex flex-col gap-2 items-start lg:w-full">

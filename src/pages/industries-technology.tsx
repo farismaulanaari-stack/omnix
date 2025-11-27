@@ -7,7 +7,7 @@ export default function IndustriesTechnologyPage() {
       <div className="container mx-auto h-full flex flex-row justify-center items-center">
         <div className="flex flex-col gap-10 justify-between items-center lg:flex-row lg:gap-0">
           <div className="w-fit flex flex-row justify-center items-center lg:w-full">
-            <Image src={TechnologyIllustration} alt="healthcare illustration" />
+            <Image src={TechnologyIllustration} alt="technology illustration" />
           </div>
           <div className="w-fit flex flex-col gap-2 items-start lg:w-full">
             <p className="text-base font-semibold text-indigo-600">
