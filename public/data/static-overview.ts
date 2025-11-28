@@ -7,27 +7,27 @@ export const staticOverviewData: OverviewCardProps[] = [
     title: "Healthcare",
     description:
       "Transformasi layanan kesehatan dengan komunikasi digital yang manusiawi dan efisien.",
-    href: "/industry#overview-healthcare",
+    href: "/industry#healthcare",
   },
   {
     Icon: Cpu,
     title: "Technology",
     description:
       "Daya ungkit inovasi melalui automasi komunikasi yang cerdas dan terintegrasi.",
-    href: "/industry#overview-technology",
+    href: "/industry#technology",
   },
   {
     Icon: Building,
     title: "Manufacturing",
     description:
       "Wujudkan operasional real-time dengan rantai pasok yang terhubung dan responsif.",
-    href: "/industry#overview-manufacturing",
+    href: "/industry#manufacturing",
   },
   {
     Icon: ReceiptText,
     title: "Retail",
     description:
       "Tingkatkan engagement pelanggan melalui pengalaman personal yang konsisten di semua channel.",
-    href: "/industry#overview-retail",
+    href: "/industry#retail",
   },
 ];

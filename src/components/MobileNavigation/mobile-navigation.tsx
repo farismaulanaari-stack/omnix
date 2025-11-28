@@ -76,7 +76,7 @@ export function MobileNavigation() {
                       </p>
                     </li>
                   </Link>
-                  <Link href={"/industries"}>
+                  <Link href={"/industry"}>
                     <li className="w-full">
                       <p className="text-lg font-medium text-black hover-effect relative w-fit">
                         omnix for industries

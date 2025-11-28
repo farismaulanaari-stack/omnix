@@ -3,28 +3,27 @@ import IndustriesIntroIllustration from "../../public/images/industries-intro-il
 
 export default function IndustriesIntroSection() {
   return (
-    <section className="pt-32 pb-16">
+    <section className="pt-32 pb-16 px-6 lg:px-6" id="intro">
       <div className="container mx-auto">
         <div className="w-full flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="w-fit flex flex-col gap-3 lg:w-full">
             <p className="text-base font-medium text-indigo-600">
-              komunikasi yang beradaptasi dengan industri Anda
+              communications that adapt to your industry
             </p>
             <h2 className="text-4xl font-bold text-black leading-snug">
-              Platform komunikasi omnichannel, dibangun untuk mendukung setiap
-              industri.
+              An omnichannel communications platform, built to support every
+              industry.
             </h2>
             <p className="text-base font-medium text-black">
-              Setiap industri menghadapi tantangan komunikasi yang unik. Itulah
-              sebabnya Omnix dirancang agar fleksibel, skalabel, dan
-              adaptif—sehingga bisnis dari semua jenis dapat menghadirkan
-              pengalaman digital yang lancar bagi pelanggan mereka.
+              Every industry faces unique communication challenges. That's why
+              Omnix is ​​designed to be flexible, scalable, and adaptive—so
+              businesses of all sizes can deliver seamless digital experiences
+              to their customers.
             </p>
             <p className="text-base font-medium text-black">
-              Dengan pesan terpadu, otomatisasi, dan wawasan waktu nyata, Omnix
-              memberdayakan organisasi untuk berkomunikasi lebih cerdas,
-              merespons lebih cepat, dan beroperasi lebih efisien di semua
-              saluran.
+              With unified messaging, automation, and real-time insights, Omnix
+              empowers organizations to communicate smarter, respond faster, and
+              operate more efficiently across all channels.
             </p>
           </div>
           <div className="w-fit flex flex-row justify-end lg:w-full">

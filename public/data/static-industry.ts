@@ -3,32 +3,30 @@ import { IndustryCardProps } from "@/types/types";
 import { Cpu, Factory, ScanHeart, ReceiptText } from "lucide-react";
 
 export const staticIndustryData: IndustryCardProps[] = [
-    {
-        industry: "technology",
-        title: "Technology",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia.",
-        href: "#",
-        Icon: Cpu
-    },
-    {
-        industry: "manufacturing",
-        title: "Manufacturing",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia.",
-        href: "#",
-        Icon: Factory
-    },
-    {
-        industry: "healthcare",
-        title: "Healthcare",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia.",
-        href: "#",
-        Icon: ScanHeart
-    },
-    {
-        industry: "retail",
-        title: "Retail",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, officia.",
-        href: "#",
-        Icon: ReceiptText
-    },
-]
+  {
+    title: "Technology",
+    description: "Supercharge innovation with smart, integrated automation.",
+    href: "/industry#technology",
+    Icon: Cpu,
+  },
+  {
+    title: "Manufacturing",
+    description:
+      "Real-time operations through connected and responsive workflows.",
+    href: "/industry#manufacture",
+    Icon: Factory,
+  },
+  {
+    title: "Healthcare",
+    description: "Human-centered digital communication for modern healthcare.",
+    href: "/industry#healthcare",
+    Icon: ScanHeart,
+  },
+  {
+    title: "Retail",
+    description:
+      "Deliver personalized customer experiences across every channel.",
+    href: "/industry#retail",
+    Icon: ReceiptText,
+  },
+];
