@@ -25,9 +25,9 @@ export default function IndustriesTechnologyPage() {
             </p>
             <p className="text-base font-medium text-black text-justify">
               All channels are in one dashboard, eliminating the hassle of
-              opening multiple apps. Users say "the support is so fast!" and
-              retention immediately increases. Want your startup to scale 10x
-              faster? Activate Omnix now.
+              opening multiple apps. Users say &quot;the support is so
+              fast!&quot; and retention immediately increases. Want your startup
+              to scale 10x faster? Activate Omnix now.
             </p>
           </div>
         </div>

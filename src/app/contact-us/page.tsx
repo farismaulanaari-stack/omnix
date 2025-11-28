@@ -8,7 +8,6 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { MapPin } from "lucide-react";
 
 export default function ContactUsPage() {

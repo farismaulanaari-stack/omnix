@@ -23,7 +23,7 @@ export function NewsletterComponent({ className }: NewsLetterProps) {
 
   const onSubmit: SubmitHandler<NewsLetterData> = async (data) => {
     if (isValid) {
-      const newsLetter = await newsletterService(data);
+      await newsletterService(data);
       toast.success("Bagus! selamat datang di omnix newsletter.", {
         description:
           "kami telah mengirim email konfirmasi, mohon untuk cek inbox anda",

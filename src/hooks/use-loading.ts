@@ -51,7 +51,7 @@ export function useLoading<T extends any[] = any[]>(
           await Promise.resolve(callback(...args));
         } catch (err) {
           // swallow; user can handle inside callback
-          // console.error(err);
+          console.error(err);
         } finally {
           if (mountedRef.current) setIsloading(false);
           timerRef.current = undefined;

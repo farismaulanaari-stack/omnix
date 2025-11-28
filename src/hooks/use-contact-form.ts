@@ -19,7 +19,7 @@ export function useContactForm() {
   });
 
   const onSubmit = async (data: ContactUsTypes) => {
-    const sendContactData = await contactUsService(data);
+    await contactUsService(data);
     toast.success(`Congrats! ${data.full_name}, your message has been sent.`, {
       description: "The Omnix team has received your message.",
       className: "w-max p-4",

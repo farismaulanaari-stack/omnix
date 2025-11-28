@@ -12,7 +12,6 @@ import { TestimonialCardProps } from "@/types/types";
 export function TestimonialCard({
   name,
   role,
-  rating,
   company,
   testimonial,
 }: TestimonialCardProps) {

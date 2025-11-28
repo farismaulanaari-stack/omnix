@@ -6,7 +6,6 @@ import OmnixLogo from "../../../public/images/omnix-logo.svg";
 import { NavigationMenu, NavigationMenuItem } from "../ui/navigation-menu";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,

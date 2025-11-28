@@ -24,10 +24,10 @@ export default function NotFoundPage() {
         </div>
         <div className="w-fit flex flex-col items-center gap-3">
           <h2 className="text-4xl font-bold text-black">
-            oops! looks like you're lost
+            oops! looks like you are lost
           </h2>
           <p className="text-base text-black/50 font-medium max-w-sm text-center">
-            you shouldn't be here, besides {`"${pathName}"`} address was never
+            you should not be here, besides {`"${pathName}"`} address was never
             on omnix...
           </p>
           <Link href={"/"}>
