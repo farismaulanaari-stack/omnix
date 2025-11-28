@@ -14,16 +14,16 @@ export const staticFooterData: FooterListItemProps[] = [
   {
     title: "Industries",
     items: [
-      { label: "Healthcare", href: "/industries" },
-      { label: "Finance", href: "/industries" },
-      { label: "Retail", href: "/industries" },
-      { label: "Manufacturing", href: "/industries" },
+      { label: "Healthcare", href: "/industry#healthcare" },
+      { label: "Technology", href: "/industry#technology" },
+      { label: "Retail", href: "/industry#retail" },
+      { label: "Manufacturing", href: "/industry#manufacture" },
     ],
   },
   {
     title: "Solutions",
     items: [
-      { label: "Unified inbox", href: "/solutions" },
+      { label: "Unified inbox", href: "/solutions#unified-inbox" },
       { label: "Broadcast automation", href: "/solutions" },
       { label: "Smart-autoreply & AI chatbot", href: "/solutions" },
       { label: "Analytics dashboard", href: "/solutions" },

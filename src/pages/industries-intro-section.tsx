@@ -15,8 +15,8 @@ export default function IndustriesIntroSection() {
               industry.
             </h2>
             <p className="text-base font-medium text-black">
-              Every industry faces unique communication challenges. That's why
-              Omnix is ​​designed to be flexible, scalable, and adaptive—so
+              Every industry faces unique communication challenges. Thats why
+              Omnix is designed to be flexible, scalable, and adaptive—so
               businesses of all sizes can deliver seamless digital experiences
               to their customers.
             </p>

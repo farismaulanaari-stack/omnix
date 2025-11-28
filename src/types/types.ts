@@ -61,7 +61,6 @@ export interface TestimonialCardProps {
   name: string;
   role: string;
   company: string;
-  rating: number;
   testimonial: string;
 }
 
@@ -89,7 +88,6 @@ export interface SelectGroupProp
     label: string;
   }[];
   placeholder?: string;
-  value: string;
   onvalchange: (service: string) => void;
 }
 

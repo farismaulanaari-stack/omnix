@@ -1,18 +1,11 @@
+import Link from "next/link";
 import Image from "next/image";
 import IndustriesHeroImage from "../../public/images/industries-hero-image.png";
+
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { ChevronRight, CpuIcon } from "lucide-react";
-import { staticOverviewData } from "../../public/data/static-overview";
 import { OverviewCard } from "@/components/OverviewCard/overview-card";
+
+import { staticOverviewData } from "../../public/data/static-overview";
 
 export default function IndustriesHeroSection() {
   return (

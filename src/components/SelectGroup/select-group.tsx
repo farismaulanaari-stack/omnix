@@ -16,7 +16,6 @@ export function SelectGroup({
   className,
   options,
   placeholder,
-  value,
   onvalchange,
   ...props
 }: SelectGroupProp) {

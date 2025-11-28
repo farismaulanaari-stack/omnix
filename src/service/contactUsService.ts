@@ -7,7 +7,7 @@ export const contactUsService = async (data: ContactUsTypes) => {
       console.error("contact data is required");
     }
 
-    const sendMessage = await emailjs.send(
+    await emailjs.send(
       "service_5ng4tay",
       "template_cw25oia",
       data,

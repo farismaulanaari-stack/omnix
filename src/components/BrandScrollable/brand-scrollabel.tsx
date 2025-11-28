@@ -28,7 +28,7 @@ export function BrandScrollable() {
     <section className="relative w-full overflow-hidden py-10">
       <div className="w-full mb-14">
         <p className="text-base text-center font-semibold text-indigo-600">
-          industrial partner's
+          industrial partners
         </p>
         <h2 className="text-2xl font-bold text-center capitalize">
           trusted by our beloved partners

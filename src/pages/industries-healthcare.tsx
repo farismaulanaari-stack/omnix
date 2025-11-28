@@ -24,7 +24,7 @@ export default function IndustriesHealthcarePage() {
               automatically 24/7.
             </p>
             <p className="text-base font-medium text-black text-justify">
-              No-shows dropped by 70%, queues disappeared, and the clinic's
+              No-shows dropped by 70%, queues disappeared, and the clinics
               reputation instantly skyrocketed. One platform replaces all your
               walkie-talkies, SMS gateways, and Excel. Want your clinic to be
               the most modern in town? Omnix is ​​ready to go today.
