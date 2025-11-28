@@ -53,31 +53,32 @@ export default function AboutSection() {
                   </div>
                   <div className="w-full h-fit max-h-full lg:max-h-1/2">
                     <p className="text-sm font-medium text-black/50">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      of businesses report faster response times with Omnix
                     </p>
                   </div>
                 </div>
                 <div className="w-full h-full flex flex-row items-center gap-3 lg:flex-col lg:h-3/4">
                   <div className="w-fit h-full flex items-center justify-center lg:w-full">
                     <h2 className="font-semibold text-6xl text-black lg:text-7xl">
-                      80%
+                      85%
                     </h2>
                   </div>
                   <div className="w-full h-fit max-h-full lg:max-h-1/2">
                     <p className="text-sm font-medium text-black/50">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      reduction in missed customer messages after switching to
+                      Omnix
                     </p>
                   </div>
                 </div>
                 <div className="w-full h-full flex flex-row items-center gap-3 lg:flex-col lg:h-3/4">
                   <div className="w-fit h-full flex items-center justify-center lg:w-full">
                     <h2 className="font-semibold text-6xl text-black lg:text-7xl">
-                      80%
+                      24/7
                     </h2>
                   </div>
                   <div className="w-full h-fit max-h-full lg:max-h-1/2">
                     <p className="text-sm font-medium text-black/50">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      customer support coverage without adding extra staff
                     </p>
                   </div>
                 </div>

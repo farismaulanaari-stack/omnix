@@ -14,16 +14,16 @@ export default function PricingPage() {
           <div className="w-fit px-6 py-1 ring-2 ring-indigo-600 bg-indigo-200 rounded-full">
             <p className="text-lg font-semibold">omnix pricing plan</p>
           </div>
-          <div className="max-w-2xl">
-            <h2 className="font-bold text-6xl text-center leading-tight">
-              Lorem ipsum dolor sit amet consectetur.
+          <div className="max-w-3xl">
+            <h2 className="font-bold text-5xl text-center leading-tight">
+              Choose the Perfect Plan for Your Business
             </h2>
           </div>
           <div className="max-w-2xl">
             <p className="text-lg font-medium text-black/50 text-center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
-              culpa consequatur vel doloremque ipsa maxime illum, accusamus a
-              inventore dolorem.
+              Choose the perfect plan to fit your team size and needs. Start
+              free for 14 days — no credit card required. All plans include 24/7
+              support and real-time updates.
             </p>
           </div>
         </div>
