@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function SolutionsHeroSection() {
   return (
-    <section className="w-full pt-36 pb-16 px-6 lg:px-0">
+    <section className="w-full pt-36 pb-36 px-6 lg:px-0">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10 items-center justify-between lg:flex-row">
           <div className="w-fit flex flex-col gap-5 lg:w-full">
