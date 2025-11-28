@@ -97,6 +97,7 @@ export function DesktopNavigation() {
                     title={card.title}
                     description={card.description}
                     Icon={card.Icon}
+                    href={card.href}
                   />
                 ))}
               </div>

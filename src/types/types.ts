@@ -32,7 +32,7 @@ export interface IndustryCardProps extends HTMLAttributes<HTMLDivElement> {
 export interface SolutionCardProps {
   title?: string;
   description?: string;
-  href?: string;
+  href: string;
   Icon?: LucideIcon;
   className?: string;
 }
